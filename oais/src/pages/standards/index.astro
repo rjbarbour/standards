@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const pages = await Astro.glob("./*.md");
+const items = pages
+  .map((p) => ({
+    url: p.url,
+    title: p.frontmatter?.title ?? p.file.split("/").pop(),
+    description: p.frontmatter?.description ?? "",
+  }))
+  .sort((a, b) => String(a.title).localeCompare(String(b.title)));
+---
+
+<BaseLayout title="Standards">
+  <h1>Standards</h1>
+  <ul>
+    {items.map((i) => (
+      <li>
+        <a href={i.url}>{i.title}</a>
+        {i.description ? <div><small>{i.description}</small></div> : null}
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
