@@ -44,6 +44,25 @@ These proposals are designed to be practical, adoptable standards that solve rea
 - Provides concrete examples and use cases
 - Is licensed under MIT for maximum permissiveness
 
+## Website and Deployment
+
+This repository includes an Astro site in `ai-open-standards/` used to publish the proposals as web pages.
+
+### Local run
+
+```bash
+cd ai-open-standards
+npm install
+npm run dev
+```
+
+### Netlify
+
+Deployment is configured at repository root via `netlify.toml`:
+- Build base: `ai-open-standards`
+- Build command: `npm run build`
+- Publish directory: `dist`
+
 ## License
 
 All content in this repository is licensed under the [MIT License](LICENSE).

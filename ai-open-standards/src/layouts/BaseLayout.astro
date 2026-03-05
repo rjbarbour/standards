@@ -1,0 +1,52 @@
+---
+const {
+  title = "Standards",
+  description = "",
+  eyebrow = "AI Open Standards",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description ? <meta name="description" content={description} /> : null}
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-aura" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/">
+          <span class="brand-mark">AI</span>
+          <span class="brand-text">AI Open Standards</span>
+        </a>
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/#library">Library</a>
+          <a href="https://github.com/rjbarbour/standards">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container content">
+      <section class="page-hero">
+        <p class="eyebrow">{eyebrow}</p>
+        <h1 class="page-title">{title}</h1>
+        {description ? <p class="page-description">{description}</p> : null}
+      </section>
+
+      <section class="page-panel">
+        <slot />
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>Editorial drafts for proposals, formats, and technical conventions.</small>
+      </div>
+    </footer>
+  </body>
+</html>

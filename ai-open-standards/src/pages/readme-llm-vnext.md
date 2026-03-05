@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BaseLayout.astro
+layout: ../layouts/BaseLayout.astro
 title: "README.llm vNext"
 description: "structured, LLM-oriented documentation file hierarchy"
 ---

@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BaseLayout.astro
+layout: ../layouts/BaseLayout.astro
 title: "OSSS — Open Specification Structure Standard"
 description: "an anti-bikeshedding tool for standards projects"
 ---
