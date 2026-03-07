@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://standards.digitalmercenaries.ai/schemas/readme-llm-vnext/manifest-0.1.schema.json",
+  "title": "README.llm vNext Manifest",
+  "description": "Machine-readable index for README.llm documentation sets",
+  "type": "object",
+  "required": ["schema_version", "library", "readme_llm"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical URL of the JSON Schema describing this manifest."
+    },
+    "schema_version": {
+      "type": "string",
+      "description": "Version of the manifest schema",
+      "pattern": "^\\d+\\.\\d+$"
+    },
+    "library": {
+      "type": "object",
+      "required": ["name", "version"],
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "description": { "type": "string" },
+        "language": { "type": "string" },
+        "runtime": { "type": "string" },
+        "interfaces": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "repository": { "type": "string", "format": "uri" },
+        "homepage": { "type": "string", "format": "uri" }
+      },
+      "additionalProperties": true
+    },
+    "readme_llm": {
+      "type": "object",
+      "required": ["path"],
+      "properties": {
+        "path": { "type": "string" },
+        "approx_tokens": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": true
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "type"],
+        "properties": {
+          "path": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["overview", "reference", "examples", "contracts", "validation", "changelog", "tutorial"]
+          },
+          "short_description": { "type": "string" },
+          "topics": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "symbols": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "approx_tokens": { "type": "integer", "minimum": 0 },
+          "has_contracts": { "type": "boolean" },
+          "has_tests": { "type": "boolean" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "total_approx_tokens": { "type": "integer", "minimum": 0 },
+    "generation": {
+      "type": "object",
+      "properties": {
+        "tool": { "type": "string" },
+        "tool_version": { "type": "string" },
+        "generated_at": { "type": "string", "format": "date-time" },
+        "source": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
