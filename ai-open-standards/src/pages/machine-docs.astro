@@ -1,0 +1,93 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const machineDocs = [
+  {
+    kicker: "Companion discovery",
+    title: "llms.txt",
+    href: "/llms.txt",
+    description:
+      "A simple web-discovery index that points humans and agents to the site's machine-facing artifacts.",
+  },
+  {
+    kicker: "Base entry point",
+    title: "README.llm",
+    href: "/README.llm",
+    description:
+      "Top-level operating rules, route guidance, and retrieval starting points for the site.",
+  },
+  {
+    kicker: "Manifest",
+    title: "llm-index.json",
+    href: "/.well-known/llm-index.json",
+    description:
+      "Machine-readable manifest describing document paths, topics, symbols, and approximate token counts.",
+  },
+  {
+    kicker: "Overview",
+    title: "Site overview",
+    href: "/llm/overview.md",
+    description:
+      "Short machine-friendly summary of site purpose, scope, and content boundaries.",
+  },
+  {
+    kicker: "Reference",
+    title: "Route reference",
+    href: "/llm/routes.md",
+    description:
+      "Canonical public routes with behavioural notes and retrieval-oriented constraints.",
+  },
+  {
+    kicker: "Examples",
+    title: "Retrieval recipes",
+    href: "/llm/retrieval-recipes.md",
+    description:
+      "Task-shaped examples for loading the minimum useful context from the site.",
+  },
+];
+---
+
+<BaseLayout
+  title="Machine-readable docs for the standards site"
+  description="A browsable index of README.llm, llms.txt, and related retrieval artifacts published by AI Open Standards."
+  eyebrow="Machine Docs"
+>
+  <section class="landing-grid">
+    <article class="spotlight-card">
+      <p class="kicker">Why this exists</p>
+      <h2>One site, two audiences</h2>
+      <p>
+        The public pages are written for human readers. The machine docs provide
+        a parallel set of entry points and retrieval hints so agents can consume
+        the same site without scanning everything.
+      </p>
+    </article>
+
+    <aside class="signal-card">
+      <p class="kicker">Recommended order</p>
+      <ol class="signal-list ordered-list">
+        <li>Read `llms.txt` or `README.llm` for top-level discovery.</li>
+        <li>Load `llm-index.json` to plan targeted retrieval.</li>
+        <li>Open only the focused `/llm/*.md` files needed for the task.</li>
+      </ol>
+    </aside>
+  </section>
+
+  <section class="library-section">
+    <div class="section-heading">
+      <p class="kicker">Artifacts</p>
+      <h2>Published machine-facing files</h2>
+    </div>
+
+    <section class="standards-grid">
+      {machineDocs.map((doc) => (
+        <article class="standard-card">
+          <p class="kicker">{doc.kicker}</p>
+          <h2><a href={doc.href}>{doc.title}</a></h2>
+          <p>{doc.description}</p>
+          <a class="text-link" href={doc.href}>Open artifact</a>
+        </article>
+      ))}
+    </section>
+  </section>
+</BaseLayout>

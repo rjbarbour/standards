@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1",
+  "library": {
+    "name": "AI Open Standards",
+    "version": "2026.03",
+    "description": "Static Astro site publishing draft standards for machine-readable documentation and specification design.",
+    "language": "Markdown, Astro",
+    "runtime": "Static website",
+    "interfaces": ["Website", "Markdown"],
+    "repository": "https://github.com/rjbarbour/standards",
+    "homepage": "https://standards.digitalmercenaries.ai/"
+  },
+  "readme_llm": {
+    "path": "/README.llm",
+    "approx_tokens": 290
+  },
+  "documents": [
+    {
+      "path": "/llm/overview.md",
+      "type": "overview",
+      "short_description": "Site purpose, content boundaries, and the relationship between public pages and machine-facing files.",
+      "topics": ["overview", "scope", "navigation", "standards", "llms"],
+      "symbols": ["/", "/README.llm", "/llms.txt", "/.well-known/llm-index.json", "/machine-docs/"],
+      "approx_tokens": 220,
+      "has_contracts": false,
+      "has_tests": false
+    },
+    {
+      "path": "/llm/routes.md",
+      "type": "reference",
+      "short_description": "Canonical route inventory with retrieval notes and behavioural constraints for the site's key URLs.",
+      "topics": ["routes", "reference", "retrieval", "artifacts", "discovery"],
+      "symbols": ["/", "/osss-proposal/", "/readme-llm-vnext/", "/README.llm", "/llms.txt", "/.well-known/llm-index.json", "/machine-docs/"],
+      "approx_tokens": 520,
+      "has_contracts": true,
+      "has_tests": false
+    },
+    {
+      "path": "/llm/retrieval-recipes.md",
+      "type": "examples",
+      "short_description": "Task-oriented retrieval patterns for navigating the site with minimal context.",
+      "topics": ["examples", "retrieval", "recipes", "agents", "workflows"],
+      "approx_tokens": 390,
+      "has_contracts": false,
+      "has_tests": false
+    }
+  ],
+  "total_approx_tokens": 1500,
+  "generation": {
+    "tool": "manual",
+    "generated_at": "2026-03-06T23:38:50Z",
+    "source": "Manual authoring from the Astro site structure and published proposal set"
+  }
+}

@@ -58,4 +58,53 @@ const items = pages
       ))}
     </section>
   </section>
+
+  <section class="library-section">
+    <div class="section-heading">
+      <p class="kicker">Machine Docs</p>
+      <h2>Published retrieval artifacts</h2>
+    </div>
+
+    <section class="standards-grid">
+      <article class="standard-card">
+        <p class="kicker">Entry point</p>
+        <h2><a href="/README.llm">README.llm</a></h2>
+        <p>
+          Base rules and route guidance for agents consuming this site as a
+          documentation corpus.
+        </p>
+        <a class="text-link" href="/README.llm">Open machine entry point</a>
+      </article>
+
+      <article class="standard-card">
+        <p class="kicker">Discovery</p>
+        <h2><a href="/llms.txt">llms.txt</a></h2>
+        <p>
+          Lightweight discovery file for crawlers and simple agents that need a
+          text-first map of the machine-readable artifacts.
+        </p>
+        <a class="text-link" href="/llms.txt">Open discovery file</a>
+      </article>
+
+      <article class="standard-card">
+        <p class="kicker">Manifest</p>
+        <h2><a href="/.well-known/llm-index.json">llm-index.json</a></h2>
+        <p>
+          Discoverable manifest describing the site&apos;s machine-facing
+          documents and retrieval metadata.
+        </p>
+        <a class="text-link" href="/.well-known/llm-index.json">Open manifest</a>
+      </article>
+
+      <article class="standard-card">
+        <p class="kicker">Browser view</p>
+        <h2><a href="/machine-docs/">Machine docs page</a></h2>
+        <p>
+          Human-readable index of the same machine-facing files for inspection,
+          demos, and review.
+        </p>
+        <a class="text-link" href="/machine-docs/">Browse machine docs</a>
+      </article>
+    </section>
+  </section>
 </BaseLayout>

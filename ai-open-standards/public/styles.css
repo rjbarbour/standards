@@ -260,6 +260,10 @@ a {
   color: var(--text);
 }
 
+.ordered-list {
+  list-style: decimal;
+}
+
 .signal-list li + li {
   margin-top: 10px;
 }

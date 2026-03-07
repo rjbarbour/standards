@@ -1,0 +1,54 @@
+<rules>
+- Use this file as the base entry point for machine consumption of the AI Open Standards site.
+- Prefer `/.well-known/llm-index.json` for discovery, then load only the listed files relevant to the current task.
+- Use `/llms.txt` as a lightweight companion discovery file for web crawlers and simple agents.
+- Treat proposal pages as editorial drafts, not ratified standards.
+- Cite canonical site routes when referencing published documents.
+- Use repository markdown sources only when site-hosted copies are unavailable or clearly out of date.
+</rules>
+
+<library_description>
+AI Open Standards is a static Astro site that publishes draft standards about
+machine-readable documentation, specification design, and adjacent technical
+conventions. The current public drafts are OSSS and README.llm vNext.
+
+The site has two layers of documentation:
+1. Human-facing pages rendered from markdown source files.
+2. Machine-facing files rooted at `README.llm`, `/.well-known/llm-index.json`,
+   `/llms.txt`, and `/llm/*.md`.
+
+Canonical routes:
+- `/` for the library landing page
+- `/osss-proposal/` for the OSSS draft
+- `/readme-llm-vnext/` for the README.llm vNext draft
+- `/README.llm` for the base machine entry point
+- `/llms.txt` for lightweight web discovery
+- `/.well-known/llm-index.json` for machine-readable discovery
+- `/machine-docs/` for a human-browsable index of machine-facing artifacts
+</library_description>
+
+<code_snippets>
+Task: Discover machine-facing documentation
+Signature: GET /.well-known/llm-index.json
+Example:
+  Fetch the manifest, inspect `documents`, then load only the files whose
+  topics match the user request.
+
+Task: Retrieve the README.llm vNext proposal
+Signature: GET /readme-llm-vnext/
+Example:
+  Use this route when the user wants the published proposal text rather than
+  the machine-facing implementation docs for the site itself.
+
+Task: Browse machine docs from a normal browser
+Signature: GET /machine-docs/
+Example:
+  Use this route when a human reviewer wants to inspect the machine-facing
+  artifacts without opening raw files directly.
+
+Task: Explain site structure for an agent workflow
+Signature: GET /llm/routes.md
+Example:
+  Load the route reference when the task concerns canonical URLs,
+  machine-readable artifacts, or retrieval planning for the site.
+</code_snippets>
