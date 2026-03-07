@@ -1,0 +1,20 @@
+# AI Open Standards
+
+> Draft standards site for machine-readable documentation and specification design.
+
+Base machine entry point: /README.llm
+Machine manifest: /.well-known/llm-index.json
+Machine docs index: /machine-docs/
+
+## Published drafts
+
+- [OSSS Proposal](/osss-proposal/): Open Specification Structure Standard draft.
+- [README.llm vNext](/readme-llm-vnext/): Retrieval-aware, multi-file, and behavioural extensions proposal.
+
+## Machine-facing docs
+
+- [README.llm](/README.llm): Base rules and site-level guidance for agents.
+- [Manifest](/.well-known/llm-index.json): Discovery manifest for targeted retrieval.
+- [Overview](/llm/overview.md): Site scope and content boundaries.
+- [Route Reference](/llm/routes.md): Canonical routes and behavioural notes.
+- [Retrieval Recipes](/llm/retrieval-recipes.md): Minimal-context task patterns.
