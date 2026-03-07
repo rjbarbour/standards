@@ -2,6 +2,8 @@
 
 This repository contains proposals for open standards that aim to improve technical communication and documentation practices.
 
+Published site: [standards.digitalmercenaries.ai](https://standards.digitalmercenaries.ai)
+
 ## Current Proposals
 
 ### 1. OSSS — Open Specification Structure Standard
