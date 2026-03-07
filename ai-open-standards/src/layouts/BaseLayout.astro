@@ -1,8 +1,9 @@
 ---
+const frontmatter = Astro.props.frontmatter ?? {};
 const {
-  title = "Standards",
-  description = "",
-  eyebrow = "AI Open Standards",
+  title = frontmatter.title ?? "Standards",
+  description = frontmatter.description ?? "",
+  eyebrow = frontmatter.eyebrow ?? "AI Open Standards",
 } = Astro.props;
 ---
 
