@@ -258,6 +258,7 @@ Both locations are acceptable. If both exist, the repository-root manifest takes
 
 ```json
 {
+  "$schema": "https://standards.digitalmercenaries.ai/schemas/readme-llm-vnext/manifest-0.1.schema.json",
   "schema_version": "0.1",
   "library": {
     "name": "ExampleLib",
@@ -327,6 +328,7 @@ Both locations are acceptable. If both exist, the repository-root manifest takes
 #### 6.1.4 Field Requirements
 
 **Required fields:**
+- `$schema` — SHOULD be present as a fully qualified URL pointing to the canonical published JSON Schema for the manifest version in use.
 - `schema_version` — MUST be present. Enables tooling to handle schema evolution.
 - `library.name` — MUST be present.
 - `library.version` — MUST be present. Critical for drift detection.
@@ -1105,14 +1107,24 @@ MCP servers, LangChain tools, and other agent frameworks could implement README.
 
 ## Appendix A: Complete Manifest JSON Schema
 
+The canonical published schema for v0.1 is:
+
+- URL: `https://standards.digitalmercenaries.ai/schemas/readme-llm-vnext/manifest-0.1.schema.json`
+
 ```json
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://standards.digitalmercenaries.ai/schemas/readme-llm-vnext/manifest-0.1.schema.json",
   "title": "README.llm vNext Manifest",
   "description": "Machine-readable index for README.llm documentation sets",
   "type": "object",
   "required": ["schema_version", "library", "readme_llm"],
   "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical URL of the JSON Schema describing this manifest."
+    },
     "schema_version": {
       "type": "string",
       "description": "Version of the manifest schema",
@@ -1133,7 +1145,8 @@ MCP servers, LangChain tools, and other agent frameworks could implement README.
         },
         "repository": { "type": "string", "format": "uri" },
         "homepage": { "type": "string", "format": "uri" }
-      }
+      },
+      "additionalProperties": true
     },
     "readme_llm": {
       "type": "object",
@@ -1141,7 +1154,8 @@ MCP servers, LangChain tools, and other agent frameworks could implement README.
       "properties": {
         "path": { "type": "string" },
         "approx_tokens": { "type": "integer", "minimum": 0 }
-      }
+      },
+      "additionalProperties": true
     },
     "documents": {
       "type": "array",
@@ -1152,8 +1166,7 @@ MCP servers, LangChain tools, and other agent frameworks could implement README.
           "path": { "type": "string" },
           "type": {
             "type": "string",
-            "enum": ["overview", "reference", "examples", "contracts",
-                     "validation", "changelog", "tutorial"]
+            "enum": ["overview", "reference", "examples", "contracts", "validation", "changelog", "tutorial"]
           },
           "short_description": { "type": "string" },
           "topics": {
@@ -1167,7 +1180,8 @@ MCP servers, LangChain tools, and other agent frameworks could implement README.
           "approx_tokens": { "type": "integer", "minimum": 0 },
           "has_contracts": { "type": "boolean" },
           "has_tests": { "type": "boolean" }
-        }
+        },
+        "additionalProperties": true
       }
     },
     "total_approx_tokens": { "type": "integer", "minimum": 0 },
@@ -1178,9 +1192,11 @@ MCP servers, LangChain tools, and other agent frameworks could implement README.
         "tool_version": { "type": "string" },
         "generated_at": { "type": "string", "format": "date-time" },
         "source": { "type": "string" }
-      }
+      },
+      "additionalProperties": true
     }
-  }
+  },
+  "additionalProperties": true
 }
 ```
 
@@ -1294,6 +1310,7 @@ Example:
 
 ```json
 {
+  "$schema": "https://standards.digitalmercenaries.ai/schemas/readme-llm-vnext/manifest-0.1.schema.json",
   "schema_version": "0.1",
   "library": {
     "name": "csvtool",

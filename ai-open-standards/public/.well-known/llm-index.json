@@ -1,4 +1,5 @@
 {
+  "$schema": "https://standards.digitalmercenaries.ai/schemas/readme-llm-vnext/manifest-0.1.schema.json",
   "schema_version": "0.1",
   "library": {
     "name": "AI Open Standards",
