@@ -144,7 +144,6 @@ a {
   font-size: clamp(2.8rem, 7vw, 5.2rem);
   line-height: 0.95;
   letter-spacing: -0.04em;
-  max-width: 12ch;
   text-wrap: balance;
 }
 
