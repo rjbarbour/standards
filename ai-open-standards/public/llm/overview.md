@@ -10,9 +10,9 @@ SpecVersion: 0.1
 # AI Open Standards Site Overview
 
 AI Open Standards publishes editorial drafts for open standards related to
-machine-readable documentation and specification design. The published site is
-small and intentionally shallow: one landing page, one page per draft
-specification, and a machine-facing documentation set for retrieval.
+machine-readable documentation and specification design. The published site
+includes both a machine-facing documentation set and a human-facing Diataxis
+example structure organized into tutorials, how-to, reference, and explanation.
 
 Use the machine-facing files in this order:
 
@@ -26,6 +26,8 @@ Current public drafts:
 
 - `/osss-proposal/` for the Open Specification Structure Standard draft.
 - `/readme-llm-vnext/` for the README.llm vNext draft.
+- `/tutorials/`, `/how-to/`, `/reference/`, and `/explanation/` for the site's
+  Diataxis-aligned example routes.
 
 The site content should be treated as draft proposal material. It is suitable
 for citation as a published draft, but it should not be described as a ratified

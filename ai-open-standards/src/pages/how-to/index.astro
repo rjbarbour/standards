@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const items = [
+  {
+    title: "Publish a README.llm vNext documentation set",
+    href: "/how-to/publish-a-docs-set/",
+    description:
+      "A task-focused guide for authors who already know what they want to ship and just need the implementation steps.",
+  },
+];
+---
+
+<BaseLayout
+  title="How-to Guides"
+  description="Task-focused instructions for publishing and maintaining README.llm vNext documentation."
+  eyebrow="Diataxis Example"
+>
+  <section class="landing-grid">
+    <article class="spotlight-card">
+      <p class="kicker">Purpose</p>
+      <h2>Help someone finish a specific task</h2>
+      <p>
+        How-to content should assume intent, skip tutorial pacing, and optimize
+        for completing a concrete outcome with minimal ambiguity.
+      </p>
+    </article>
+
+    <aside class="signal-card">
+      <p class="kicker">Lens</p>
+      <ul class="signal-list">
+        <li>Task-first</li>
+        <li>Minimal theory</li>
+        <li>Actionable and concise</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section class="library-section">
+    <div class="section-heading">
+      <p class="kicker">Available</p>
+      <h2>How-to routes</h2>
+    </div>
+
+    <section class="standards-grid">
+      {items.map((item) => (
+        <article class="standard-card">
+          <p class="kicker">How-to</p>
+          <h2><a href={item.href}>{item.title}</a></h2>
+          <p>{item.description}</p>
+          <a class="text-link" href={item.href}>Open guide</a>
+        </article>
+      ))}
+    </section>
+  </section>
+</BaseLayout>

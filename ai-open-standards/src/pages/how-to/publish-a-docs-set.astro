@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Publish a README.llm vNext documentation set"
+  description="A concise implementation guide for shipping README.llm, llm-index.json, and supporting files on a repository or website."
+  eyebrow="How-to"
+>
+  <p>
+    Use this guide when you already know you want to publish a README.llm vNext
+    documentation set and just need the concrete steps.
+  </p>
+
+  <h2>1. Publish the entry point</h2>
+  <p>
+    Keep a valid README.llm file at the repository root or equivalent entry
+    location. This remains the base artifact.
+  </p>
+
+  <h2>2. Publish the manifest</h2>
+  <p>
+    Add `llm-index.json` at repository root or `/.well-known/llm-index.json`
+    for site-hosted docs. Include the canonical schema URL in `$schema`.
+  </p>
+
+  <h2>3. Split large topics into separate files</h2>
+  <p>
+    Create focused support files for reference material, task recipes, or
+    behavioral contracts instead of expanding the base file indefinitely.
+  </p>
+
+  <h2>4. Add metadata headers to the support files</h2>
+  <p>
+    This enables head-first retrieval and keeps files useful when copied or
+    uploaded independently.
+  </p>
+
+  <h2>5. Validate before release</h2>
+  <p>
+    Check the manifest against the published schema, verify that listed files
+    exist, and confirm that retrieval can start from the manifest without
+    scanning the full corpus.
+  </p>
+</BaseLayout>

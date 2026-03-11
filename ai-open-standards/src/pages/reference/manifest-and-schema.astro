@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Manifest and schema reference"
+  description="Reference for the live llm-index.json manifest, the published JSON Schema, and the site's machine-facing entry points."
+  eyebrow="Reference"
+>
+  <p>
+    This page is a reference companion to the site's README.llm vNext example
+    implementation.
+  </p>
+
+  <h2>Canonical artifacts</h2>
+  <ul>
+    <li><a href="/README.llm">`/README.llm`</a></li>
+    <li><a href="/.well-known/llm-index.json">`/.well-known/llm-index.json`</a></li>
+    <li>
+      <a href="/schemas/readme-llm-vnext/manifest-0.1.schema.json">
+        `/schemas/readme-llm-vnext/manifest-0.1.schema.json`
+      </a>
+    </li>
+  </ul>
+
+  <h2>What each artifact does</h2>
+  <ul>
+    <li>`README.llm` is the base machine entry point.</li>
+    <li>`llm-index.json` is the retrieval manifest.</li>
+    <li>The schema file defines the manifest structure.</li>
+  </ul>
+
+  <h2>When to use this page</h2>
+  <p>
+    Use this page when you need an exact route, field name, or canonical schema
+    URL. Use the how-to or tutorial sections when you need workflow guidance
+    instead of factual lookup.
+  </p>
+</BaseLayout>

@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="First README.llm vNext documentation set"
+  description="A guided tutorial for publishing a minimal multi-file documentation set with README.llm, llm-index.json, and one supporting document."
+  eyebrow="Tutorial"
+>
+  <p>
+    This tutorial shows the smallest credible README.llm vNext adoption path:
+    start with one existing README.llm file, add a manifest, split out one
+    focused supporting document, and publish the resulting set.
+  </p>
+
+  <h2>Starting point</h2>
+  <p>You already have:</p>
+  <ul>
+    <li>a library or tool with stable behavior</li>
+    <li>a single README.llm or equivalent structured document</li>
+    <li>one topic that is large enough to deserve its own file</li>
+  </ul>
+
+  <h2>Step 1: Keep the README.llm file as the entry point</h2>
+  <p>
+    Do not replace the base file. The tutorial assumes README.llm remains the
+    primary orientation artifact for both humans and machines.
+  </p>
+
+  <h2>Step 2: Add `llm-index.json`</h2>
+  <p>
+    Publish a manifest that lists the entry point and the supporting document
+    you are about to create. This gives retrieval systems a deterministic place
+    to start.
+  </p>
+
+  <h2>Step 3: Split out one focused support document</h2>
+  <p>
+    Move one coherent topic into its own file. Good first candidates are a
+    command reference, a behavioral contract page, or a quickstart recipe set.
+  </p>
+
+  <h2>Step 4: Add document-level metadata</h2>
+  <p>
+    Start the supporting file with the metadata header so agents can inspect the
+    file cheaply before loading the full content.
+  </p>
+
+  <h2>Step 5: Publish and validate</h2>
+  <p>
+    Validate the manifest against the published schema, confirm paths resolve,
+    and check that the documentation set can be navigated without reading the
+    entire corpus.
+  </p>
+
+  <h2>Result</h2>
+  <p>
+    You now have a minimal multi-file documentation set that is still simple
+    enough to maintain, but already much easier for retrieval-driven systems to
+    consume.
+  </p>
+</BaseLayout>
