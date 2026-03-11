@@ -406,10 +406,11 @@ Libraries are not required to use all types. A minimal extended implementation m
 
 #### 6.2.4 Diataxis Compatibility (Non-Normative)
 
-For human-facing documentation published alongside a README.llm documentation
-set, authors MAY find it useful to organize documents using the Diataxis
-framework's four lenses: tutorials, how-to guides, reference, and explanation.
-This can coexist cleanly with the retrieval-oriented structures defined here.
+For documentation sets intended to remain readable for people while also being
+easier for LLMs to discover and retrieve, authors MAY find it useful to
+organize documents using the Diataxis framework's four lenses: tutorials,
+how-to guides, reference, and explanation. This can coexist cleanly with the
+retrieval-oriented structures defined here.
 
 This is a recommendation, not a compliance requirement. Implementations remain
 free to use other information architectures, and the manifest `type` values
@@ -427,7 +428,8 @@ In practice, a site may expose human-facing routes such as:
 ```
 
 while still publishing machine-facing artifacts such as `ReadMe.LLM`,
-`llm-index.json`, metadata headers, and contract-focused reference files.
+`llm-index.json`, metadata headers, and contract-focused reference files around
+those Markdown documents.
 
 #### 6.2.5 Chunking Principles
 

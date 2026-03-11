@@ -10,9 +10,9 @@ SpecVersion: 0.1
 # AI Open Standards Site Overview
 
 AI Open Standards publishes editorial drafts for open standards related to
-machine-readable documentation and specification design. The published site
-includes both a machine-facing documentation set and a human-facing Diataxis
-example structure organized into tutorials, how-to, reference, and explanation.
+machine-readable documentation and specification design. The published site uses
+normal Markdown documentation organized with Diataxis-style routes, with a
+machine-facing manifest and metadata layer wrapped around that content.
 
 Use the machine-facing files in this order:
 

@@ -47,12 +47,12 @@ SpecVersion: 0.1
 
 ## `/tutorials/`, `/how-to/`, `/reference/`, `/explanation/`
 
-**Description:** Human-facing example routes showing how a README.llm vNext site
-can be organized using Diataxis-style lenses.
+**Description:** Markdown documentation routes showing how a README.llm vNext
+site can be organized using Diataxis-style lenses.
 
 ### Preconditions
 - Use these routes when the task is about the site's example information
-  architecture rather than the raw proposal text.
+  architecture rather than only the raw proposal text.
 - Treat them as a non-normative implementation example, not a compliance
   requirement of the standard.
 
