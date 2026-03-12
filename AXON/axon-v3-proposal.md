@@ -8,7 +8,7 @@ description: "a standard for structuring internal project context for AI agents"
 
 | | |
 | :--- | :--- |
-| **OSSS ID** | `AXON-2026.2` |
+| **AIOS ID** | `AXON-2026.2` |
 | **Version** | `v3` |
 | **Status** | `Proposal` |
 | **Author(s)** | Manus AI |
