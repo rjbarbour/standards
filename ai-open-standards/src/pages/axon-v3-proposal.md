@@ -167,10 +167,11 @@ An AXON-compliant project MUST include an `INTENT.md` file at its root. This doc
 2.  **Desired Outcomes:** Measurable states that indicate success.
 3.  **Health Metrics:** What must not degrade while pursuing the outcomes.
 4.  **Strategic Context:** The system the agent operates in (with links to organisation-level documents).
-5.  **Constraints (Steering):** Behavioural guardrails for the agent.
-6.  **Constraints (Hard):** Non-negotiable rules (with links to policy documents).
-7.  **Decision Autonomy:** What the agent may decide alone vs. must escalate.
-8.  **Stop Rules:** When to halt, escalate, or declare completion.
+5.  **Constraints:** A required parent section containing the following two subsections:
+    - **5.1 Constraints (Steering):** Behavioural guardrails for the agent.
+    - **5.2 Constraints (Hard):** Non-negotiable rules (with links to policy documents).
+6.  **Decision Autonomy:** What the agent may decide alone vs. must escalate.
+7.  **Stop Rules:** When to halt, escalate, or declare completion.
 
 An example `INTENT.md` is provided in Appendix C.
 
@@ -373,25 +374,27 @@ To generate consistent, low-risk profit by exploiting latency arbitrage opportun
 
 This project is part of the organisation's broader strategy to explore and capitalize on decentralized finance (DeFi) opportunities. See the company's internal wiki for the full DeFi strategy document.
 
-## 5. Constraints (Steering)
+## 5. Constraints
+
+### 5.1 Constraints (Steering)
 
 - Prioritize capital preservation over aggressive profit-taking.
 - Avoid trades with a predicted edge of less than 0.5% after fees.
 - Do not engage in strategies other than latency arbitrage.
 
-## 6. Constraints (Hard)
+### 5.2 Constraints (Hard)
 
 - The bot MUST NOT hold a position in any single market greater than 10% of the total bot capital.
 - The bot MUST adhere to all Polymarket terms of service.
 - All code MUST pass the automated test suite before deployment.
 
-## 7. Decision Autonomy
+## 6. Decision Autonomy
 
 - The bot MAY autonomously adjust trade size based on market liquidity.
 - The bot MAY autonomously halt trading if it detects a high rate of execution errors.
 - The bot MUST NOT deploy a new trading strategy without human approval.
 
-## 8. Stop Rules
+## 7. Stop Rules
 
 - **Halt:** If Net PnL drops by more than 5% in a single 24-hour period.
 - **Escalate:** If the Polymarket API returns a persistent, unrecoverable error.
