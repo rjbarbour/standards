@@ -404,7 +404,34 @@ The following document types are defined:
 
 Libraries are not required to use all types. A minimal extended implementation might consist of ReadMe.LLM plus a single reference document.
 
-#### 6.2.4 Chunking Principles
+#### 6.2.4 Diataxis Compatibility (Non-Normative)
+
+For documentation sets intended to remain readable for people while also being
+easier for LLMs to discover and retrieve, authors MAY find it useful to
+organize documents using the Diataxis framework's four lenses: tutorials,
+how-to guides, reference, and explanation. This can coexist cleanly with the
+retrieval-oriented structures defined here.
+
+This is a recommendation, not a compliance requirement. Implementations remain
+free to use other information architectures, and the manifest `type` values
+defined in this specification remain the normative machine-facing taxonomy.
+There is no requirement for a one-to-one mapping between Diataxis labels and
+manifest `type` values.
+
+In practice, a site may expose human-facing routes such as:
+
+```
+/tutorials/
+/how-to/
+/reference/
+/explanation/
+```
+
+while still publishing machine-facing artifacts such as `ReadMe.LLM`,
+`llm-index.json`, metadata headers, and contract-focused reference files around
+those Markdown documents.
+
+#### 6.2.5 Chunking Principles
 
 Documentation files SHOULD be chunked according to the following principles:
 

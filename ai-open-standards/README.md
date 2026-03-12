@@ -8,6 +8,10 @@ Minimal Astro site for publishing proposal documents from this repository.
 - `/osss-proposal/`
 - `/readme-llm-vnext/`
 - `/machine-docs/`
+- `/tutorials/`
+- `/how-to/`
+- `/reference/`
+- `/explanation/`
 - `/README.llm`
 - `/llms.txt`
 - `/.well-known/llm-index.json`

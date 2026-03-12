@@ -20,8 +20,8 @@
       "path": "/llm/overview.md",
       "type": "overview",
       "short_description": "Site purpose, content boundaries, and the relationship between public pages and machine-facing files.",
-      "topics": ["overview", "scope", "navigation", "standards", "llms"],
-      "symbols": ["/", "/README.llm", "/llms.txt", "/.well-known/llm-index.json", "/machine-docs/"],
+      "topics": ["overview", "scope", "navigation", "standards", "llms", "diataxis"],
+      "symbols": ["/", "/README.llm", "/llms.txt", "/.well-known/llm-index.json", "/machine-docs/", "/tutorials/", "/how-to/", "/reference/", "/explanation/"],
       "approx_tokens": 220,
       "has_contracts": false,
       "has_tests": false
@@ -30,8 +30,8 @@
       "path": "/llm/routes.md",
       "type": "reference",
       "short_description": "Canonical route inventory with retrieval notes and behavioural constraints for the site's key URLs.",
-      "topics": ["routes", "reference", "retrieval", "artifacts", "discovery"],
-      "symbols": ["/", "/osss-proposal/", "/readme-llm-vnext/", "/README.llm", "/llms.txt", "/.well-known/llm-index.json", "/machine-docs/"],
+      "topics": ["routes", "reference", "retrieval", "artifacts", "discovery", "diataxis"],
+      "symbols": ["/", "/osss-proposal/", "/readme-llm-vnext/", "/README.llm", "/llms.txt", "/.well-known/llm-index.json", "/machine-docs/", "/tutorials/", "/how-to/", "/reference/", "/explanation/"],
       "approx_tokens": 520,
       "has_contracts": true,
       "has_tests": false
