@@ -3,6 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "generate:standards-pages": "node scripts/generate-standards-pages.mjs",
+    "predev": "npm run generate:standards-pages",
+    "prestart": "npm run generate:standards-pages",
+    "prebuild": "npm run generate:standards-pages",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",

@@ -96,10 +96,12 @@ const machineDocs = [
     <section class="standards-grid">
       {machineDocs.map((doc) => (
         <article class="standard-card">
-          <p class="kicker">{doc.kicker}</p>
-          <h2><a href={doc.href}>{doc.title}</a></h2>
-          <p>{doc.description}</p>
-          <a class="text-link" href={doc.href}>Open artifact</a>
+          <a class="card-link" href={doc.href}>
+            <p class="kicker">{doc.kicker}</p>
+            <h2>{doc.title}</h2>
+            <p>{doc.description}</p>
+            <span class="text-link">Open artifact</span>
+          </a>
         </article>
       ))}
     </section>

@@ -1,17 +1,14 @@
----
-layout: ../layouts/BaseLayout.astro
-title: "OSSS — Open Specification Structure Standard"
-description: "an anti-bikeshedding tool for standards projects"
----
-
-
 # OSSS — Open Specification Structure Standard
 
-**Version:** 0.1
-**Status:** Proposal
-**Author:** Robert J. Barbour
-**Date:** February 2026
-**License:** MIT
+| | |
+| :--- | :--- |
+| **AIOS ID** | `AIOS-0001` |
+| **Version** | `0.1` |
+| **Status** | `Proposal` |
+| **Author(s)** | R. J. Babour |
+| **Created** | 2026-02-17 |
+| **Last Modified** | 2026-03-12 |
+| **License** | MIT |
 
 ---
 
@@ -241,7 +238,8 @@ Every OSSS-compliant document MUST begin with a metadata block containing at min
 | **Version** | REQUIRED | Enables stable references and change tracking |
 | **Status** | REQUIRED | Enables workflow tooling and reader expectations |
 | **Author(s)** | REQUIRED | Attribution and point of contact |
-| **Date** | REQUIRED | Temporal context |
+| **Created** | REQUIRED | Origin date for the document |
+| **Last Modified** | REQUIRED | Most recent substantive revision date |
 | **License** | RECOMMENDED | Reuse and derivative work clarity |
 
 **Status values.** OSSS does not prescribe a fixed set of status values, but the following are RECOMMENDED as a minimal vocabulary:
@@ -255,9 +253,9 @@ Every OSSS-compliant document MUST begin with a metadata block containing at min
 
 Projects MAY define additional status values appropriate to their governance model.
 
-**Format.** The metadata block SHOULD be rendered as bold key-value pairs at the document head. Projects that use YAML frontmatter, TOML headers, or other structured formats MAY use those instead, provided the same fields are present.
+**Format.** The metadata block SHOULD be rendered immediately below the document title as a two-column Markdown table, with field names in the left column and values in the right. Dates SHOULD use ISO 8601 calendar date format: `YYYY-MM-DD` (for example, `2026-03-12`). Projects MAY add optional metadata fields after the required ones. Machine-readable frontmatter, TOML headers, or similar structured metadata MAY accompany this block, but they SHOULD NOT replace the human-readable metadata table in the published document.
 
-**Why this section matters.** A document without version metadata cannot be stably referenced. A document without status cannot be reliably assessed — readers cannot distinguish a working draft from an accepted standard. A document without an author has no point of contact for questions or amendments. These are the minimum requirements for a document to function as a living artefact in a community process.
+**Why this section matters.** A document without version metadata cannot be stably referenced. A document without status cannot be reliably assessed — readers cannot distinguish a working draft from an accepted standard. A document without authorship or revision dates has no clear provenance or maintenance trail. These are the minimum requirements for a document to function as a living artefact in a community process.
 
 ### 6.3 Abstract
 
@@ -380,7 +378,7 @@ An OSSS-compliant document MUST contain all REQUIRED sections with substantive c
 1. **Section presence.** All REQUIRED sections exist with the correct headings.
 2. **Minimum length.** Each REQUIRED section contains at least two sentences of analytical prose (not solely bullet points) that address the section's stated purpose.
 3. **No placeholder text.** Sections containing only "TBD," "Not applicable," "To be determined," or equivalent placeholders do not satisfy the requirement.
-4. **Metadata completeness.** All REQUIRED metadata fields (Title, Version, Status, Author, Date) are present.
+4. **Metadata completeness.** All REQUIRED metadata fields (Title, Version, Status, Author(s), Created, Last Modified) are present.
 
 **Reviewer-assessed criteria** (require human judgment):
 
@@ -400,7 +398,7 @@ An OSSS-compliant document SHOULD contain all RECOMMENDED sections.
 
 | Section | Requirement | Compliance Test |
 |---|---|---|
-| Metadata Block | REQUIRED | All REQUIRED fields (Title, Version, Status, Author, Date) present |
+| Metadata Block | REQUIRED | All REQUIRED fields (Title, Version, Status, Author(s), Created, Last Modified) present |
 | Abstract | REQUIRED | Single paragraph, ≥ 3 sentences, addresses problem + solution + scope |
 | Scope, Applicability & Limitations | REQUIRED | Explicitly states ≥ 1 exclusion or limitation; states where the system applies and where it does not |
 | Problem Statement | REQUIRED | Describes a concrete problem with ≥ 1 form of evidence |
@@ -420,7 +418,7 @@ This document conforms to its own structure. The table below serves both as a co
 
 | OSSS Section | This Document | Compliance Verification |
 |---|---|---|
-| Metadata Block | Document header | ✓ Title, Version (0.1), Status (Proposal), Author (Robert J. Barbour), Date (February 2026), License (MIT) — all REQUIRED fields present |
+| Metadata Block | Document header | ✓ Title, Version (0.1), Status (Proposal), Author(s) (R. J. Babour), Created (2026-02-17), Last Modified (2026-03-12), License (MIT) — all REQUIRED fields present |
 | Abstract | Section 1 | ✓ Single paragraph, 5 sentences, addresses problem (reinvented templates), solution (anti-bikeshedding default structure), scope (document structure, not governance) |
 | Scope, Applicability & Limitations | Section 2 | ✓ States 4 document-scope exclusions (governance, markup syntax, subject matter, formal verification), states where OSSS applies and does not, identifies 4 known limitations |
 | Problem Statement | Section 3 | ✓ Concrete problem (reinvention, reviewer burden, tooling gap) with informal survey evidence (3.4) |
@@ -564,11 +562,11 @@ A study comparing proposal quality (as measured by reviewer satisfaction, time t
 
 ## Appendix B: Case Study — README.llm vNext
 
-The README.llm vNext proposal (Barbour, 2026) — a specification extending the ReadMe.LLM framework for retrieval-aware LLM documentation — was developed concurrently with OSSS and closely mirrors its structure. The following mapping demonstrates how OSSS sections apply to a concrete, real-world specification:
+The README.llm vNext proposal (Babour, 2026) — a specification extending the ReadMe.LLM framework for retrieval-aware LLM documentation — was developed concurrently with OSSS and closely mirrors its structure. The following mapping demonstrates how OSSS sections apply to a concrete, real-world specification:
 
 | OSSS Section | README.llm vNext | Content |
 |---|---|---|
-| Metadata Block | Document header | Title, Version 0.1, Draft, Author, Date, License |
+| Metadata Block | Document header | Title, Version 0.1, Status Proposal, Author(s), Created, Last Modified, License |
 | Abstract | Section 1 | Extends ReadMe.LLM with retrieval, multi-file, contracts |
 | Scope, Applicability & Limitations | Sections 1a, 7 | Document scope: 8K-200K tokens, synchronous APIs, not concurrent systems; System applicability: not IDEs, not concurrent systems |
 | Problem Statement | Section 2 | Documentation-consumption mismatch, cross-interface problem, retrieval gap |
@@ -640,7 +638,7 @@ Each OSSS section exists to address a specific failure mode observed across spec
 - Go Proposal Process. https://github.com/golang/proposal
 - Bradner, S. (1997). RFC 2119: *Key words for use in RFCs to Indicate Requirement Levels*. IETF. https://www.rfc-editor.org/rfc/rfc2119
 - Nygard, M. (2011). *Documenting Architecture Decisions*. https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions
-- Barbour, R. J. (2026). *README.llm vNext: Retrieval-Aware, Multi-File, and Behavioural Extensions*. https://github.com/rjbarbour/standards/tree/main/README.llms-vNext
+- Babour, R. J. (2026). *README.llm vNext: Retrieval-Aware, Multi-File, and Behavioural Extensions*. https://github.com/rjbarbour/standards/tree/main/README.llms-vNext
 - Semantic Versioning 2.0.0. https://semver.org/
 - Conventional Commits 1.0.0. https://www.conventionalcommits.org/
 - Keep a Changelog 1.1.0. https://keepachangelog.com/

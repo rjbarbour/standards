@@ -1,10 +1,14 @@
 # README.llm vNext: Retrieval-Aware, Multi-File, and Behavioural Extensions
 
-**Version:** 0.1 (Draft)
-**Status:** Proposal
-**Author:** Robert J. Barbour
-**Date:** February 2026
-**License:** MIT
+| | |
+| :--- | :--- |
+| **AIOS ID** | `AIOS-0002` |
+| **Version** | `0.1` |
+| **Status** | `Proposal` |
+| **Author(s)** | R. J. Babour |
+| **Created** | 2026-02-17 |
+| **Last Modified** | 2026-03-12 |
+| **License** | MIT |
 
 ---
 

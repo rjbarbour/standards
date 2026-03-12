@@ -19,3 +19,9 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# generated proposal pages
+src/pages/osss.md
+src/pages/readme-llm-vnext.md
+src/pages/axon.md
+src/pages/cloakd.md

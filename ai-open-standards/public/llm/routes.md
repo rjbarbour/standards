@@ -21,7 +21,7 @@ SpecVersion: 0.1
 - If a draft is missing from the landing page, do not assume it is unpublished;
   confirm against the repository source.
 
-## `/osss-proposal/`
+## `/osss/`
 
 **Description:** Published page for the OSSS draft.
 
@@ -44,6 +44,32 @@ SpecVersion: 0.1
 ### Failure Modes
 - Avoid mixing examples inside the proposal appendix with site implementation
   details unless the task explicitly asks for comparison.
+
+## `/axon/`
+
+**Description:** Published page for the AXON draft.
+
+### Preconditions
+- Use this route for the current public copy of the AXON proposal.
+- Prefer this route when the task is about internal agent context architecture,
+  session priming, or tiered knowledge organization.
+
+### Failure Modes
+- Do not confuse AXON with the site's own machine-facing discovery files;
+  AXON is a published proposal, not the site's retrieval contract.
+
+## `/cloakd/`
+
+**Description:** Published page for the CLOAKD draft.
+
+### Preconditions
+- Use this route for the current public copy of the CLOAKD proposal.
+- Prefer this route when the task concerns secret handling, credential
+  delivery, or security guidance for agentic development environments.
+
+### Failure Modes
+- Do not assume CLOAKD governs the site's deployment secrets or Netlify setup
+  unless the task explicitly asks to apply the proposal to this repository.
 
 ## `/tutorials/`, `/how-to/`, `/reference/`, `/explanation/`
 
