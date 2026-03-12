@@ -503,8 +503,7 @@ button:focus-visible {
 }
 
 .card-link .text-link {
-  margin-top: auto;
-  padding-top: 18px;
+  margin-top: 18px;
 }
 
 .standard-card::before {
