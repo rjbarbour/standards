@@ -45,7 +45,7 @@ SpecVersion: 0.1
 - Avoid mixing examples inside the proposal appendix with site implementation
   details unless the task explicitly asks for comparison.
 
-## `/axon-v3/`
+## `/axon/`
 
 **Description:** Published page for the AXON draft.
 

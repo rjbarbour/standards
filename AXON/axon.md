@@ -3,7 +3,7 @@
 | | |
 | :--- | :--- |
 | **AIOS ID** | `AIOS-0003` |
-| **Version** | `3.0` |
+| **Version** | `0.1` |
 | **Status** | `Proposal` |
 | **Author(s)** | R. J. Babour, with Manus AI |
 | **Created** | 2026-03-11 |

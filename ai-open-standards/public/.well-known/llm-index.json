@@ -21,7 +21,7 @@
       "type": "overview",
       "short_description": "Site purpose, content boundaries, and the relationship between public pages and machine-facing files.",
       "topics": ["overview", "scope", "navigation", "standards", "llms", "diataxis"],
-      "symbols": ["/", "/osss/", "/readme-llm-vnext/", "/axon-v3/", "/cloakd/", "/README.llm", "/llms.txt", "/.well-known/llm-index.json", "/machine-docs/", "/tutorials/", "/how-to/", "/reference/", "/explanation/"],
+      "symbols": ["/", "/osss/", "/readme-llm-vnext/", "/axon/", "/cloakd/", "/README.llm", "/llms.txt", "/.well-known/llm-index.json", "/machine-docs/", "/tutorials/", "/how-to/", "/reference/", "/explanation/"],
       "approx_tokens": 220,
       "has_contracts": false,
       "has_tests": false
@@ -31,7 +31,7 @@
       "type": "reference",
       "short_description": "Canonical route inventory with retrieval notes and behavioural constraints for the site's key URLs.",
       "topics": ["routes", "reference", "retrieval", "artifacts", "discovery", "diataxis"],
-      "symbols": ["/", "/osss/", "/readme-llm-vnext/", "/axon-v3/", "/cloakd/", "/README.llm", "/llms.txt", "/.well-known/llm-index.json", "/machine-docs/", "/tutorials/", "/how-to/", "/reference/", "/explanation/"],
+      "symbols": ["/", "/osss/", "/readme-llm-vnext/", "/axon/", "/cloakd/", "/README.llm", "/llms.txt", "/.well-known/llm-index.json", "/machine-docs/", "/tutorials/", "/how-to/", "/reference/", "/explanation/"],
       "approx_tokens": 700,
       "has_contracts": true,
       "has_tests": false
@@ -57,11 +57,11 @@
       "has_tests": false
     },
     {
-      "path": "/axon-v3/",
+      "path": "/axon/",
       "type": "specification",
       "short_description": "Published AXON draft for structuring internal project context and intent artifacts for AI agents.",
       "topics": ["proposal", "axon", "context-engineering", "intent", "agents"],
-      "symbols": ["/axon-v3/"],
+      "symbols": ["/axon/"],
       "approx_tokens": 5900,
       "has_contracts": false,
       "has_tests": false

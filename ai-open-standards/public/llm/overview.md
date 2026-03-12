@@ -26,7 +26,7 @@ Current public drafts:
 
 - `/osss/` for the Open Specification Structure Standard draft.
 - `/readme-llm-vnext/` for the README.llm vNext draft.
-- `/axon-v3/` for the AXON agent context architecture draft.
+- `/axon/` for the AXON agent context architecture draft.
 - `/cloakd/` for the CLOAKD credential security draft.
 - `/tutorials/`, `/how-to/`, `/reference/`, and `/explanation/` for the site's
   Diataxis-aligned example routes.

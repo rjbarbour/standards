@@ -21,8 +21,8 @@ const standards = [
     description: "structured, LLM-oriented documentation file hierarchy",
   },
   {
-    source: path.join(repoRoot, "AXON", "axon-v3.md"),
-    output: path.join(pagesDir, "axon-v3.md"),
+    source: path.join(repoRoot, "AXON", "axon.md"),
+    output: path.join(pagesDir, "axon.md"),
     title: "AXON: Agentic Context Orchestration Nexus",
     description: "a standard for structuring internal project context for AI agents",
   },

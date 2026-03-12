@@ -7,7 +7,7 @@ Minimal Astro site for publishing proposal documents from this repository.
 - `/` - Standards landing page
 - `/osss/`
 - `/readme-llm-vnext/`
-- `/axon-v3/`
+- `/axon/`
 - `/cloakd/`
 - `/machine-docs/`
 - `/tutorials/`

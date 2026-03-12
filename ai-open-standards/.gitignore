@@ -23,5 +23,5 @@ pnpm-debug.log*
 # generated proposal pages
 src/pages/osss.md
 src/pages/readme-llm-vnext.md
-src/pages/axon-v3.md
+src/pages/axon.md
 src/pages/cloakd.md
