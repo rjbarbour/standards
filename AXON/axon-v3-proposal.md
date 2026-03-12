@@ -2,7 +2,7 @@
 
 | | |
 | :--- | :--- |
-| **AIOS ID** | `AXON-2026.2` |
+| **AIOS ID** | `AIOS-0003` |
 | **Version** | `3.0` |
 | **Status** | `Proposal` |
 | **Author(s)** | R. J. Babour, with Manus AI |

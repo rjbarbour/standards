@@ -2,6 +2,7 @@
 
 | | |
 | :--- | :--- |
+| **AIOS ID** | `AIOS-0002` |
 | **Version** | `0.1` |
 | **Status** | `Proposal` |
 | **Author(s)** | R. J. Babour |
