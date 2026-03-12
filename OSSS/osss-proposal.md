@@ -5,8 +5,8 @@
 | **Version** | `0.1` |
 | **Status** | `Proposal` |
 | **Author(s)** | R. J. Babour |
-| **Created** | 17 Feb 2026 |
-| **Last Modified** | 12 Mar 2026 |
+| **Created** | 2026-02-17 |
+| **Last Modified** | 2026-03-12 |
 | **License** | MIT |
 
 ---
@@ -252,7 +252,7 @@ Every OSSS-compliant document MUST begin with a metadata block containing at min
 
 Projects MAY define additional status values appropriate to their governance model.
 
-**Format.** The metadata block SHOULD be rendered immediately below the document title as a two-column Markdown table, with field names in the left column and values in the right. Dates SHOULD use the `DD Mon YYYY` format (for example, `12 Mar 2026`). Projects MAY add optional metadata fields after the required ones. Machine-readable frontmatter, TOML headers, or similar structured metadata MAY accompany this block, but they SHOULD NOT replace the human-readable metadata table in the published document.
+**Format.** The metadata block SHOULD be rendered immediately below the document title as a two-column Markdown table, with field names in the left column and values in the right. Dates SHOULD use ISO 8601 calendar date format: `YYYY-MM-DD` (for example, `2026-03-12`). Projects MAY add optional metadata fields after the required ones. Machine-readable frontmatter, TOML headers, or similar structured metadata MAY accompany this block, but they SHOULD NOT replace the human-readable metadata table in the published document.
 
 **Why this section matters.** A document without version metadata cannot be stably referenced. A document without status cannot be reliably assessed — readers cannot distinguish a working draft from an accepted standard. A document without authorship or revision dates has no clear provenance or maintenance trail. These are the minimum requirements for a document to function as a living artefact in a community process.
 
@@ -417,7 +417,7 @@ This document conforms to its own structure. The table below serves both as a co
 
 | OSSS Section | This Document | Compliance Verification |
 |---|---|---|
-| Metadata Block | Document header | ✓ Title, Version (0.1), Status (Proposal), Author(s) (R. J. Babour), Created (17 Feb 2026), Last Modified (12 Mar 2026), License (MIT) — all REQUIRED fields present |
+| Metadata Block | Document header | ✓ Title, Version (0.1), Status (Proposal), Author(s) (R. J. Babour), Created (2026-02-17), Last Modified (2026-03-12), License (MIT) — all REQUIRED fields present |
 | Abstract | Section 1 | ✓ Single paragraph, 5 sentences, addresses problem (reinvented templates), solution (anti-bikeshedding default structure), scope (document structure, not governance) |
 | Scope, Applicability & Limitations | Section 2 | ✓ States 4 document-scope exclusions (governance, markup syntax, subject matter, formal verification), states where OSSS applies and does not, identifies 4 known limitations |
 | Problem Statement | Section 3 | ✓ Concrete problem (reinvention, reviewer burden, tooling gap) with informal survey evidence (3.4) |

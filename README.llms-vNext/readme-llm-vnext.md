@@ -5,8 +5,8 @@
 | **Version** | `0.1` |
 | **Status** | `Proposal` |
 | **Author(s)** | R. J. Babour |
-| **Created** | 17 Feb 2026 |
-| **Last Modified** | 12 Mar 2026 |
+| **Created** | 2026-02-17 |
+| **Last Modified** | 2026-03-12 |
 | **License** | MIT |
 
 ---
