@@ -12,8 +12,37 @@ const {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
     <title>{title}</title>
     {description ? <meta name="description" content={description} /> : null}
+    <script is:inline>
+      (() => {
+        const storageKey = "theme-preference";
+        const root = document.documentElement;
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+        const getStoredTheme = () => {
+          try {
+            const value = localStorage.getItem(storageKey);
+            return value === "light" || value === "dark" ? value : null;
+          } catch {
+            return null;
+          }
+        };
+
+        const applyTheme = (theme) => {
+          const resolvedTheme = theme ?? (mediaQuery.matches ? "dark" : "light");
+          if (theme) {
+            root.dataset.theme = theme;
+          } else {
+            delete root.dataset.theme;
+          }
+          root.dataset.themeResolved = resolvedTheme;
+        };
+
+        applyTheme(getStoredTheme());
+      })();
+    </script>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
@@ -24,13 +53,35 @@ const {
           <span class="brand-mark">AI</span>
           <span class="brand-text">AI Open Standards</span>
         </a>
-        <nav class="nav">
-          <a href="/">Home</a>
-          <a href="/#library">Library</a>
-          <a href="/machine-docs/">Machine Docs</a>
-          <a href="/README.llm">README.llm</a>
-          <a href="https://github.com/rjbarbour/standards">GitHub</a>
-        </nav>
+        <div class="header-actions">
+          <nav class="nav">
+            <a href="/">Home</a>
+            <a href="/#library">Library</a>
+            <a href="/machine-docs/">Machine Docs</a>
+            <a href="/README.llm">README.llm</a>
+            <a href="https://github.com/rjbarbour/standards">GitHub</a>
+          </nav>
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Toggle color theme"
+            title="Toggle color theme"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                class="theme-toggle-sun"
+                fill="currentColor"
+                d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0-14.25a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V4.5a.75.75 0 0 1 .75-.75Zm0 14.25a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75Zm8.25-6.75a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1 0-1.5h1.5Zm-14.25 0a.75.75 0 0 1 0 1.5H4.5a.75.75 0 0 1 0-1.5H6Zm10.2-5.7a.75.75 0 0 1 1.06 0l1.06 1.06a.75.75 0 1 1-1.06 1.06l-1.06-1.06a.75.75 0 0 1 0-1.06Zm-10.66 10.66a.75.75 0 0 1 1.06 0l1.06 1.06a.75.75 0 0 1-1.06 1.06l-1.06-1.06a.75.75 0 0 1 0-1.06Zm11.72 1.06a.75.75 0 0 1 1.06-1.06l1.06 1.06a.75.75 0 0 1-1.06 1.06l-1.06-1.06Zm-10.66-10.66a.75.75 0 1 1 1.06 1.06L6.86 8.72A.75.75 0 1 1 5.8 7.66l1.06-1.06Z"
+              />
+              <path
+                class="theme-toggle-moon"
+                fill="currentColor"
+                d="M21.752 15.002A9.718 9.718 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.598.748-3.752A9.753 9.753 0 1 0 21.752 15.002Z"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -51,5 +102,80 @@ const {
         <small>Editorial drafts for proposals, formats, and technical conventions.</small>
       </div>
     </footer>
+
+    <script is:inline>
+      (() => {
+        const themeToggle = document.querySelector("[data-theme-toggle]");
+
+        if (themeToggle instanceof HTMLButtonElement) {
+          const storageKey = "theme-preference";
+          const root = document.documentElement;
+          const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+          const getStoredTheme = () => {
+            try {
+              const value = localStorage.getItem(storageKey);
+              return value === "light" || value === "dark" ? value : null;
+            } catch {
+              return null;
+            }
+          };
+
+          const applyTheme = (theme) => {
+            const resolvedTheme = theme ?? (mediaQuery.matches ? "dark" : "light");
+            if (theme) {
+              root.dataset.theme = theme;
+            } else {
+              delete root.dataset.theme;
+            }
+            root.dataset.themeResolved = resolvedTheme;
+          };
+
+          const setStoredTheme = (theme) => {
+            try {
+              if (theme) {
+                localStorage.setItem(storageKey, theme);
+              } else {
+                localStorage.removeItem(storageKey);
+              }
+            } catch {}
+            applyTheme(theme);
+          };
+
+          const syncToggle = () => {
+            const resolvedTheme = root.dataset.themeResolved ?? (mediaQuery.matches ? "dark" : "light");
+            const storedTheme = getStoredTheme();
+            const nextTheme = resolvedTheme === "dark" ? "light" : "dark";
+            const source = storedTheme ?? `system (${resolvedTheme})`;
+
+            themeToggle.dataset.themeState = resolvedTheme;
+            themeToggle.setAttribute("aria-pressed", String(resolvedTheme === "dark"));
+            themeToggle.setAttribute("aria-label", `Theme: ${source}. Switch to ${nextTheme}.`);
+            themeToggle.setAttribute("title", `Theme: ${source}. Click to switch to ${nextTheme}.`);
+          };
+
+          themeToggle.addEventListener("click", () => {
+            const resolvedTheme = root.dataset.themeResolved ?? (mediaQuery.matches ? "dark" : "light");
+            setStoredTheme(resolvedTheme === "dark" ? "light" : "dark");
+            syncToggle();
+          });
+
+          const handleSystemThemeChange = () => {
+            if (!getStoredTheme()) {
+              applyTheme(null);
+              syncToggle();
+            }
+          };
+
+          if (typeof mediaQuery.addEventListener === "function") {
+            mediaQuery.addEventListener("change", handleSystemThemeChange);
+          } else if (typeof mediaQuery.addListener === "function") {
+            mediaQuery.addListener(handleSystemThemeChange);
+          }
+
+          syncToggle();
+        }
+      })();
+    </script>
   </body>
 </html>
