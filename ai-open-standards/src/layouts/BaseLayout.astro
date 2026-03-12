@@ -144,9 +144,9 @@ const {
 
           const syncToggle = () => {
             const resolvedTheme = root.dataset.themeResolved ?? (mediaQuery.matches ? "dark" : "light");
-            const storedTheme = getStoredTheme();
             const nextTheme = resolvedTheme === "dark" ? "light" : "dark";
-            const source = storedTheme ?? `system (${resolvedTheme})`;
+            const explicitTheme = root.dataset.theme;
+            const source = explicitTheme ? `manual (${resolvedTheme})` : `system (${resolvedTheme})`;
 
             themeToggle.dataset.themeState = resolvedTheme;
             themeToggle.setAttribute("aria-pressed", String(resolvedTheme === "dark"));
@@ -161,7 +161,7 @@ const {
           });
 
           const handleSystemThemeChange = () => {
-            if (!getStoredTheme()) {
+            if (!root.dataset.theme) {
               applyTheme(null);
               syncToggle();
             }
