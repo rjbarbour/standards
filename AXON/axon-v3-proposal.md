@@ -1,3 +1,9 @@
+---
+layout: ../ai-open-standards/src/layouts/BaseLayout.astro
+title: "AXON: Agentic Context Orchestration Nexus"
+description: "a standard for structuring internal project context for AI agents"
+---
+
 # AXON: Agentic Context Orchestration Nexus
 
 | | |

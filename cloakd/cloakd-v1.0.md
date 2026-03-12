@@ -1,4 +1,10 @@
 ---
+layout: ../ai-open-standards/src/layouts/BaseLayout.astro
+title: "CLOAKD: Cloaking Secrets from Agentic AI"
+description: "a security standard for credential handling in agentic development environments"
+---
+
+---
 **Standard:** CLOAKD
 **Title:** Cloaking Secrets from Agentic AI
 **Version:** 1.0
