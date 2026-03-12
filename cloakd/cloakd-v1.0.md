@@ -1,19 +1,13 @@
----
-layout: ../ai-open-standards/src/layouts/BaseLayout.astro
-title: "CLOAKD: Cloaking Secrets from Agentic AI"
-description: "a security standard for credential handling in agentic development environments"
----
-
 # CLOAKD: Cloaking Secrets from Agentic AI
 
 | | |
 | :--- | :--- |
 | **Version** | `1.0` |
 | **Status** | `Release` |
-| **Author(s)** | R.J. Barbour, with Manus AI |
+| **Author(s)** | R. J. Babour, with Manus AI |
 | **Created** | 11 Mar 2026 |
 | **Last Modified** | 12 Mar 2026 |
-| **License** | CC BY-SA 4.0 |
+| **License** | MIT |
 
 ## 1. Abstract
 

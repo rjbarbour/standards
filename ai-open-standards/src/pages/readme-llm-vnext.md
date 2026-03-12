@@ -4,14 +4,14 @@ title: "README.llm vNext"
 description: "structured, LLM-oriented documentation file hierarchy"
 ---
 
-
+<!-- GENERATED FILE: edit ../README.llms-vNext/readme-llm-vnext.md -->
 # README.llm vNext: Retrieval-Aware, Multi-File, and Behavioural Extensions
 
 | | |
 | :--- | :--- |
 | **Version** | `0.1` |
 | **Status** | `Proposal` |
-| **Author(s)** | Robert J. Barbour |
+| **Author(s)** | R. J. Babour |
 | **Created** | 17 Feb 2026 |
 | **Last Modified** | 12 Mar 2026 |
 | **License** | MIT |

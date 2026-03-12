@@ -1,20 +1,14 @@
----
-layout: ../ai-open-standards/src/layouts/BaseLayout.astro
-title: "AXON: Agentic Context Orchestration Nexus"
-description: "a standard for structuring internal project context for AI agents"
----
-
 # AXON: Agentic Context Orchestration Nexus
 
 | | |
 | :--- | :--- |
 | **AIOS ID** | `AXON-2026.2` |
-| **Version** | `v3` |
+| **Version** | `3.0` |
 | **Status** | `Proposal` |
-| **Author(s)** | Manus AI |
+| **Author(s)** | R. J. Babour, with Manus AI |
 | **Created** | 11 Mar 2026 |
 | **Last Modified** | 12 Mar 2026 |
-| **License** | CC BY-SA 4.0 |
+| **License** | MIT |
 
 ## Abstract
 

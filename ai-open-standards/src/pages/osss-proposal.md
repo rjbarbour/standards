@@ -4,14 +4,14 @@ title: "OSSS — Open Specification Structure Standard"
 description: "an anti-bikeshedding tool for standards projects"
 ---
 
-
+<!-- GENERATED FILE: edit ../OSSS/osss-proposal.md -->
 # OSSS — Open Specification Structure Standard
 
 | | |
 | :--- | :--- |
 | **Version** | `0.1` |
 | **Status** | `Proposal` |
-| **Author(s)** | Robert J. Barbour |
+| **Author(s)** | R. J. Babour |
 | **Created** | 17 Feb 2026 |
 | **Last Modified** | 12 Mar 2026 |
 | **License** | MIT |
@@ -424,7 +424,7 @@ This document conforms to its own structure. The table below serves both as a co
 
 | OSSS Section | This Document | Compliance Verification |
 |---|---|---|
-| Metadata Block | Document header | ✓ Title, Version (0.1), Status (Proposal), Author(s) (Robert J. Barbour), Created (17 Feb 2026), Last Modified (12 Mar 2026), License (MIT) — all REQUIRED fields present |
+| Metadata Block | Document header | ✓ Title, Version (0.1), Status (Proposal), Author(s) (R. J. Babour), Created (17 Feb 2026), Last Modified (12 Mar 2026), License (MIT) — all REQUIRED fields present |
 | Abstract | Section 1 | ✓ Single paragraph, 5 sentences, addresses problem (reinvented templates), solution (anti-bikeshedding default structure), scope (document structure, not governance) |
 | Scope, Applicability & Limitations | Section 2 | ✓ States 4 document-scope exclusions (governance, markup syntax, subject matter, formal verification), states where OSSS applies and does not, identifies 4 known limitations |
 | Problem Statement | Section 3 | ✓ Concrete problem (reinvention, reviewer burden, tooling gap) with informal survey evidence (3.4) |
@@ -568,7 +568,7 @@ A study comparing proposal quality (as measured by reviewer satisfaction, time t
 
 ## Appendix B: Case Study — README.llm vNext
 
-The README.llm vNext proposal (Barbour, 2026) — a specification extending the ReadMe.LLM framework for retrieval-aware LLM documentation — was developed concurrently with OSSS and closely mirrors its structure. The following mapping demonstrates how OSSS sections apply to a concrete, real-world specification:
+The README.llm vNext proposal (Babour, 2026) — a specification extending the ReadMe.LLM framework for retrieval-aware LLM documentation — was developed concurrently with OSSS and closely mirrors its structure. The following mapping demonstrates how OSSS sections apply to a concrete, real-world specification:
 
 | OSSS Section | README.llm vNext | Content |
 |---|---|---|
@@ -644,7 +644,7 @@ Each OSSS section exists to address a specific failure mode observed across spec
 - Go Proposal Process. https://github.com/golang/proposal
 - Bradner, S. (1997). RFC 2119: *Key words for use in RFCs to Indicate Requirement Levels*. IETF. https://www.rfc-editor.org/rfc/rfc2119
 - Nygard, M. (2011). *Documenting Architecture Decisions*. https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions
-- Barbour, R. J. (2026). *README.llm vNext: Retrieval-Aware, Multi-File, and Behavioural Extensions*. https://github.com/rjbarbour/standards/tree/main/README.llms-vNext
+- Babour, R. J. (2026). *README.llm vNext: Retrieval-Aware, Multi-File, and Behavioural Extensions*. https://github.com/rjbarbour/standards/tree/main/README.llms-vNext
 - Semantic Versioning 2.0.0. https://semver.org/
 - Conventional Commits 1.0.0. https://www.conventionalcommits.org/
 - Keep a Changelog 1.1.0. https://keepachangelog.com/
