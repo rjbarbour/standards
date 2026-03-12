@@ -21,7 +21,7 @@
       "type": "overview",
       "short_description": "Site purpose, content boundaries, and the relationship between public pages and machine-facing files.",
       "topics": ["overview", "scope", "navigation", "standards", "llms", "diataxis"],
-      "symbols": ["/", "/README.llm", "/llms.txt", "/.well-known/llm-index.json", "/machine-docs/", "/tutorials/", "/how-to/", "/reference/", "/explanation/"],
+      "symbols": ["/", "/osss-proposal/", "/readme-llm-vnext/", "/axon-v3-proposal/", "/cloakd-v1.0/", "/README.llm", "/llms.txt", "/.well-known/llm-index.json", "/machine-docs/", "/tutorials/", "/how-to/", "/reference/", "/explanation/"],
       "approx_tokens": 220,
       "has_contracts": false,
       "has_tests": false
@@ -31,9 +31,49 @@
       "type": "reference",
       "short_description": "Canonical route inventory with retrieval notes and behavioural constraints for the site's key URLs.",
       "topics": ["routes", "reference", "retrieval", "artifacts", "discovery", "diataxis"],
-      "symbols": ["/", "/osss-proposal/", "/readme-llm-vnext/", "/README.llm", "/llms.txt", "/.well-known/llm-index.json", "/machine-docs/", "/tutorials/", "/how-to/", "/reference/", "/explanation/"],
-      "approx_tokens": 520,
+      "symbols": ["/", "/osss-proposal/", "/readme-llm-vnext/", "/axon-v3-proposal/", "/cloakd-v1.0/", "/README.llm", "/llms.txt", "/.well-known/llm-index.json", "/machine-docs/", "/tutorials/", "/how-to/", "/reference/", "/explanation/"],
+      "approx_tokens": 700,
       "has_contracts": true,
+      "has_tests": false
+    },
+    {
+      "path": "/osss-proposal/",
+      "type": "specification",
+      "short_description": "Published OSSS draft defining a default structure for technical standards and proposal documents.",
+      "topics": ["proposal", "specification", "standards", "templates", "osss"],
+      "symbols": ["/osss-proposal/"],
+      "approx_tokens": 8600,
+      "has_contracts": false,
+      "has_tests": false
+    },
+    {
+      "path": "/readme-llm-vnext/",
+      "type": "specification",
+      "short_description": "Published README.llm vNext draft covering retrieval-aware, multi-file machine documentation.",
+      "topics": ["proposal", "readme.llm", "documentation", "retrieval", "llms"],
+      "symbols": ["/readme-llm-vnext/"],
+      "approx_tokens": 11200,
+      "has_contracts": true,
+      "has_tests": false
+    },
+    {
+      "path": "/axon-v3-proposal/",
+      "type": "specification",
+      "short_description": "Published AXON draft for structuring internal project context and intent artifacts for AI agents.",
+      "topics": ["proposal", "axon", "context-engineering", "intent", "agents"],
+      "symbols": ["/axon-v3-proposal/"],
+      "approx_tokens": 5900,
+      "has_contracts": false,
+      "has_tests": false
+    },
+    {
+      "path": "/cloakd-v1.0/",
+      "type": "specification",
+      "short_description": "Published CLOAKD draft for credential handling and secret protection in agentic development workflows.",
+      "topics": ["proposal", "cloakd", "security", "credentials", "agents"],
+      "symbols": ["/cloakd-v1.0/"],
+      "approx_tokens": 5000,
+      "has_contracts": false,
       "has_tests": false
     },
     {
@@ -46,10 +86,10 @@
       "has_tests": false
     }
   ],
-  "total_approx_tokens": 1500,
+  "total_approx_tokens": 32010,
   "generation": {
     "tool": "manual",
-    "generated_at": "2026-03-06T23:38:50Z",
+    "generated_at": "2026-03-12T03:45:00Z",
     "source": "Manual authoring from the Astro site structure and published proposal set"
   }
 }

@@ -10,6 +10,8 @@ Machine docs index: /machine-docs/
 
 - [OSSS Proposal](/osss-proposal/): Open Specification Structure Standard draft.
 - [README.llm vNext](/readme-llm-vnext/): Retrieval-aware, multi-file, and behavioural extensions proposal.
+- [AXON](/axon-v3-proposal/): Agentic Context Orchestration Nexus proposal.
+- [CLOAKD](/cloakd-v1.0/): Credential handling standard for agentic development environments.
 
 ## Machine-facing docs
 

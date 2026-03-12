@@ -10,7 +10,8 @@
 <library_description>
 AI Open Standards is a static Astro site that publishes draft standards about
 machine-readable documentation, specification design, and adjacent technical
-conventions. The current public drafts are OSSS and README.llm vNext.
+conventions. The current public drafts are OSSS, README.llm vNext, AXON, and
+CLOAKD.
 
 The site has two layers of documentation:
 1. Human-facing pages rendered from markdown source files.
@@ -21,6 +22,8 @@ Canonical routes:
 - `/` for the library landing page
 - `/osss-proposal/` for the OSSS draft
 - `/readme-llm-vnext/` for the README.llm vNext draft
+- `/axon-v3-proposal/` for the AXON draft
+- `/cloakd-v1.0/` for the CLOAKD draft
 - `/README.llm` for the base machine entry point
 - `/llms.txt` for lightweight web discovery
 - `/.well-known/llm-index.json` for machine-readable discovery
@@ -39,6 +42,17 @@ Signature: GET /readme-llm-vnext/
 Example:
   Use this route when the user wants the published proposal text rather than
   the machine-facing implementation docs for the site itself.
+
+Task: Retrieve the AXON proposal
+Signature: GET /axon-v3-proposal/
+Example:
+  Use this route for the published AXON draft on agent context architecture.
+
+Task: Retrieve the CLOAKD proposal
+Signature: GET /cloakd-v1.0/
+Example:
+  Use this route for the published CLOAKD draft on secret handling in agentic
+  development environments.
 
 Task: Browse machine docs from a normal browser
 Signature: GET /machine-docs/
