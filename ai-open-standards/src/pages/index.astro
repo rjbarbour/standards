@@ -50,10 +50,12 @@ const items = pages
     <section class="standards-grid">
       {items.map((i) => (
         <article class="standard-card">
-          <p class="kicker">Draft standard</p>
-          <h2><a href={i.url}>{i.title}</a></h2>
-          {i.description ? <p>{i.description}</p> : null}
-          <a class="text-link" href={i.url}>Open document</a>
+          <a class="card-link" href={i.url}>
+            <p class="kicker">Draft standard</p>
+            <h2>{i.title}</h2>
+            {i.description ? <p>{i.description}</p> : null}
+            <span class="text-link">Open document</span>
+          </a>
         </article>
       ))}
     </section>
@@ -67,43 +69,51 @@ const items = pages
 
     <section class="standards-grid">
       <article class="standard-card">
-        <p class="kicker">Entry point</p>
-        <h2><a href="/README.llm">README.llm</a></h2>
-        <p>
-          Base rules and route guidance for agents consuming this site as a
-          documentation corpus.
-        </p>
-        <a class="text-link" href="/README.llm">Open machine entry point</a>
+        <a class="card-link" href="/README.llm">
+          <p class="kicker">Entry point</p>
+          <h2>README.llm</h2>
+          <p>
+            Base rules and route guidance for agents consuming this site as a
+            documentation corpus.
+          </p>
+          <span class="text-link">Open machine entry point</span>
+        </a>
       </article>
 
       <article class="standard-card">
-        <p class="kicker">Discovery</p>
-        <h2><a href="/llms.txt">llms.txt</a></h2>
-        <p>
-          Lightweight discovery file for crawlers and simple agents that need a
-          text-first map of the machine-readable artifacts.
-        </p>
-        <a class="text-link" href="/llms.txt">Open discovery file</a>
+        <a class="card-link" href="/llms.txt">
+          <p class="kicker">Discovery</p>
+          <h2>llms.txt</h2>
+          <p>
+            Lightweight discovery file for crawlers and simple agents that need a
+            text-first map of the machine-readable artifacts.
+          </p>
+          <span class="text-link">Open discovery file</span>
+        </a>
       </article>
 
       <article class="standard-card">
-        <p class="kicker">Manifest</p>
-        <h2><a href="/.well-known/llm-index.json">llm-index.json</a></h2>
-        <p>
-          Discoverable manifest describing the site&apos;s machine-facing
-          documents and retrieval metadata.
-        </p>
-        <a class="text-link" href="/.well-known/llm-index.json">Open manifest</a>
+        <a class="card-link" href="/.well-known/llm-index.json">
+          <p class="kicker">Manifest</p>
+          <h2>llm-index.json</h2>
+          <p>
+            Discoverable manifest describing the site&apos;s machine-facing
+            documents and retrieval metadata.
+          </p>
+          <span class="text-link">Open manifest</span>
+        </a>
       </article>
 
       <article class="standard-card">
-        <p class="kicker">Browser view</p>
-        <h2><a href="/machine-docs/">Machine docs page</a></h2>
-        <p>
-          Human-readable index of the same machine-facing files for inspection,
-          demos, and review.
-        </p>
-        <a class="text-link" href="/machine-docs/">Browse machine docs</a>
+        <a class="card-link" href="/machine-docs/">
+          <p class="kicker">Browser view</p>
+          <h2>Machine docs page</h2>
+          <p>
+            Human-readable index of the same machine-facing files for inspection,
+            demos, and review.
+          </p>
+          <span class="text-link">Browse machine docs</span>
+        </a>
       </article>
     </section>
   </section>
@@ -116,31 +126,39 @@ const items = pages
 
     <section class="standards-grid">
       <article class="standard-card">
-        <p class="kicker">Tutorial</p>
-        <h2><a href="/tutorials/">Tutorials</a></h2>
-        <p>Guided, sequential walkthroughs for first-time adopters.</p>
-        <a class="text-link" href="/tutorials/">Browse tutorials</a>
+        <a class="card-link" href="/tutorials/">
+          <p class="kicker">Tutorial</p>
+          <h2>Tutorials</h2>
+          <p>Guided, sequential walkthroughs for first-time adopters.</p>
+          <span class="text-link">Browse tutorials</span>
+        </a>
       </article>
 
       <article class="standard-card">
-        <p class="kicker">How-to</p>
-        <h2><a href="/how-to/">How-to guides</a></h2>
-        <p>Task-focused instructions for specific implementation goals.</p>
-        <a class="text-link" href="/how-to/">Browse guides</a>
+        <a class="card-link" href="/how-to/">
+          <p class="kicker">How-to</p>
+          <h2>How-to guides</h2>
+          <p>Task-focused instructions for specific implementation goals.</p>
+          <span class="text-link">Browse guides</span>
+        </a>
       </article>
 
       <article class="standard-card">
-        <p class="kicker">Reference</p>
-        <h2><a href="/reference/">Reference</a></h2>
-        <p>Stable lookup material for the live manifest, schema, and artifacts.</p>
-        <a class="text-link" href="/reference/">Browse reference</a>
+        <a class="card-link" href="/reference/">
+          <p class="kicker">Reference</p>
+          <h2>Reference</h2>
+          <p>Stable lookup material for the live manifest, schema, and artifacts.</p>
+          <span class="text-link">Browse reference</span>
+        </a>
       </article>
 
       <article class="standard-card">
-        <p class="kicker">Explanation</p>
-        <h2><a href="/explanation/">Explanation</a></h2>
-        <p>Conceptual material, proposals, rationale, and tradeoffs.</p>
-        <a class="text-link" href="/explanation/">Browse explanation</a>
+        <a class="card-link" href="/explanation/">
+          <p class="kicker">Explanation</p>
+          <h2>Explanation</h2>
+          <p>Conceptual material, proposals, rationale, and tradeoffs.</p>
+          <span class="text-link">Browse explanation</span>
+        </a>
       </article>
     </section>
   </section>
