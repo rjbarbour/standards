@@ -9,8 +9,8 @@ const pagesDir = path.join(siteRoot, "src", "pages");
 
 const standards = [
   {
-    source: path.join(repoRoot, "OSSS", "osss-proposal.md"),
-    output: path.join(pagesDir, "osss-proposal.md"),
+    source: path.join(repoRoot, "OSSS", "osss.md"),
+    output: path.join(pagesDir, "osss.md"),
     title: "OSSS — Open Specification Structure Standard",
     description: "an anti-bikeshedding tool for standards projects",
   },
@@ -21,14 +21,14 @@ const standards = [
     description: "structured, LLM-oriented documentation file hierarchy",
   },
   {
-    source: path.join(repoRoot, "AXON", "axon-v3-proposal.md"),
-    output: path.join(pagesDir, "axon-v3-proposal.md"),
+    source: path.join(repoRoot, "AXON", "axon-v3.md"),
+    output: path.join(pagesDir, "axon-v3.md"),
     title: "AXON: Agentic Context Orchestration Nexus",
     description: "a standard for structuring internal project context for AI agents",
   },
   {
-    source: path.join(repoRoot, "cloakd", "cloakd-v1.0.md"),
-    output: path.join(pagesDir, "cloakd-v1.0.md"),
+    source: path.join(repoRoot, "cloakd", "cloakd.md"),
+    output: path.join(pagesDir, "cloakd.md"),
     title: "CLOAKD: Cloaking Secrets from Agentic AI",
     description: "a security standard for credential handling in agentic development environments",
   },

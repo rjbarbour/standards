@@ -24,10 +24,10 @@ Use the machine-facing files in this order:
 
 Current public drafts:
 
-- `/osss-proposal/` for the Open Specification Structure Standard draft.
+- `/osss/` for the Open Specification Structure Standard draft.
 - `/readme-llm-vnext/` for the README.llm vNext draft.
-- `/axon-v3-proposal/` for the AXON agent context architecture draft.
-- `/cloakd-v1.0/` for the CLOAKD credential security draft.
+- `/axon-v3/` for the AXON agent context architecture draft.
+- `/cloakd/` for the CLOAKD credential security draft.
 - `/tutorials/`, `/how-to/`, `/reference/`, and `/explanation/` for the site's
   Diataxis-aligned example routes.
 

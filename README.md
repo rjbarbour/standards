@@ -9,7 +9,7 @@ Published site: [standards.digitalmercenaries.ai](https://standards.digitalmerce
 ### 1. OSSS — Open Specification Structure Standard
 
 **Status:** Proposal (v0.1)  
-**Location:** [OSSS/osss-proposal.md](OSSS/osss-proposal.md)
+**Location:** [OSSS/osss.md](OSSS/osss.md)
 
 OSSS is a minimal, opinionated, governance-agnostic document structure for technical specifications and proposals. It eliminates the structural design phase that every standards project faces by providing a sensible default structure — similar to how Semantic Versioning standardizes version numbers or Conventional Commits standardizes commit messages.
 

@@ -21,7 +21,7 @@ SpecVersion: 0.1
 - If a draft is missing from the landing page, do not assume it is unpublished;
   confirm against the repository source.
 
-## `/osss-proposal/`
+## `/osss/`
 
 **Description:** Published page for the OSSS draft.
 
@@ -45,7 +45,7 @@ SpecVersion: 0.1
 - Avoid mixing examples inside the proposal appendix with site implementation
   details unless the task explicitly asks for comparison.
 
-## `/axon-v3-proposal/`
+## `/axon-v3/`
 
 **Description:** Published page for the AXON draft.
 
@@ -58,7 +58,7 @@ SpecVersion: 0.1
 - Do not confuse AXON with the site's own machine-facing discovery files;
   AXON is a published proposal, not the site's retrieval contract.
 
-## `/cloakd-v1.0/`
+## `/cloakd/`
 
 **Description:** Published page for the CLOAKD draft.
 

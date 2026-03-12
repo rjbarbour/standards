@@ -20,7 +20,7 @@ proposals, rationale, comparisons, and architectural interpretation.
 
 - [README.llm vNext proposal](/readme-llm-vnext/)
   The full proposal text defining the extension itself.
-- [OSSS proposal](/osss-proposal/)
+- [OSSS proposal](/osss/)
   The related proposal for specification structure and proposal design.
 - [Why Diataxis fits README.llm vNext](/explanation/diataxis-and-readme-llm-vnext/)
   A conceptual note on using Diataxis as an organizing layer that stays readable

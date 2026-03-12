@@ -20,10 +20,10 @@ The site has two layers of documentation:
 
 Canonical routes:
 - `/` for the library landing page
-- `/osss-proposal/` for the OSSS draft
+- `/osss/` for the OSSS draft
 - `/readme-llm-vnext/` for the README.llm vNext draft
-- `/axon-v3-proposal/` for the AXON draft
-- `/cloakd-v1.0/` for the CLOAKD draft
+- `/axon-v3/` for the AXON draft
+- `/cloakd/` for the CLOAKD draft
 - `/README.llm` for the base machine entry point
 - `/llms.txt` for lightweight web discovery
 - `/.well-known/llm-index.json` for machine-readable discovery
@@ -44,12 +44,12 @@ Example:
   the machine-facing implementation docs for the site itself.
 
 Task: Retrieve the AXON proposal
-Signature: GET /axon-v3-proposal/
+Signature: GET /axon-v3/
 Example:
   Use this route for the published AXON draft on agent context architecture.
 
 Task: Retrieve the CLOAKD proposal
-Signature: GET /cloakd-v1.0/
+Signature: GET /cloakd/
 Example:
   Use this route for the published CLOAKD draft on secret handling in agentic
   development environments.
