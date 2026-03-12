@@ -7,11 +7,14 @@ description: "an anti-bikeshedding tool for standards projects"
 
 # OSSS — Open Specification Structure Standard
 
-**Version:** 0.1
-**Status:** Proposal
-**Author:** Robert J. Barbour
-**Date:** February 2026
-**License:** MIT
+| | |
+| :--- | :--- |
+| **Version** | `0.1` |
+| **Status** | `Proposal` |
+| **Author(s)** | Robert J. Barbour |
+| **Created** | 17 Feb 2026 |
+| **Last Modified** | 12 Mar 2026 |
+| **License** | MIT |
 
 ---
 
@@ -241,7 +244,8 @@ Every OSSS-compliant document MUST begin with a metadata block containing at min
 | **Version** | REQUIRED | Enables stable references and change tracking |
 | **Status** | REQUIRED | Enables workflow tooling and reader expectations |
 | **Author(s)** | REQUIRED | Attribution and point of contact |
-| **Date** | REQUIRED | Temporal context |
+| **Created** | REQUIRED | Origin date for the document |
+| **Last Modified** | REQUIRED | Most recent substantive revision date |
 | **License** | RECOMMENDED | Reuse and derivative work clarity |
 
 **Status values.** OSSS does not prescribe a fixed set of status values, but the following are RECOMMENDED as a minimal vocabulary:
@@ -255,9 +259,9 @@ Every OSSS-compliant document MUST begin with a metadata block containing at min
 
 Projects MAY define additional status values appropriate to their governance model.
 
-**Format.** The metadata block SHOULD be rendered as bold key-value pairs at the document head. Projects that use YAML frontmatter, TOML headers, or other structured formats MAY use those instead, provided the same fields are present.
+**Format.** The metadata block SHOULD be rendered immediately below the document title as a two-column Markdown table, with field names in the left column and values in the right. Dates SHOULD use the `DD Mon YYYY` format (for example, `12 Mar 2026`). Projects MAY add optional metadata fields after the required ones. Machine-readable frontmatter, TOML headers, or similar structured metadata MAY accompany this block, but they SHOULD NOT replace the human-readable metadata table in the published document.
 
-**Why this section matters.** A document without version metadata cannot be stably referenced. A document without status cannot be reliably assessed — readers cannot distinguish a working draft from an accepted standard. A document without an author has no point of contact for questions or amendments. These are the minimum requirements for a document to function as a living artefact in a community process.
+**Why this section matters.** A document without version metadata cannot be stably referenced. A document without status cannot be reliably assessed — readers cannot distinguish a working draft from an accepted standard. A document without authorship or revision dates has no clear provenance or maintenance trail. These are the minimum requirements for a document to function as a living artefact in a community process.
 
 ### 6.3 Abstract
 
@@ -380,7 +384,7 @@ An OSSS-compliant document MUST contain all REQUIRED sections with substantive c
 1. **Section presence.** All REQUIRED sections exist with the correct headings.
 2. **Minimum length.** Each REQUIRED section contains at least two sentences of analytical prose (not solely bullet points) that address the section's stated purpose.
 3. **No placeholder text.** Sections containing only "TBD," "Not applicable," "To be determined," or equivalent placeholders do not satisfy the requirement.
-4. **Metadata completeness.** All REQUIRED metadata fields (Title, Version, Status, Author, Date) are present.
+4. **Metadata completeness.** All REQUIRED metadata fields (Title, Version, Status, Author(s), Created, Last Modified) are present.
 
 **Reviewer-assessed criteria** (require human judgment):
 
@@ -400,7 +404,7 @@ An OSSS-compliant document SHOULD contain all RECOMMENDED sections.
 
 | Section | Requirement | Compliance Test |
 |---|---|---|
-| Metadata Block | REQUIRED | All REQUIRED fields (Title, Version, Status, Author, Date) present |
+| Metadata Block | REQUIRED | All REQUIRED fields (Title, Version, Status, Author(s), Created, Last Modified) present |
 | Abstract | REQUIRED | Single paragraph, ≥ 3 sentences, addresses problem + solution + scope |
 | Scope, Applicability & Limitations | REQUIRED | Explicitly states ≥ 1 exclusion or limitation; states where the system applies and where it does not |
 | Problem Statement | REQUIRED | Describes a concrete problem with ≥ 1 form of evidence |
@@ -420,7 +424,7 @@ This document conforms to its own structure. The table below serves both as a co
 
 | OSSS Section | This Document | Compliance Verification |
 |---|---|---|
-| Metadata Block | Document header | ✓ Title, Version (0.1), Status (Proposal), Author (Robert J. Barbour), Date (February 2026), License (MIT) — all REQUIRED fields present |
+| Metadata Block | Document header | ✓ Title, Version (0.1), Status (Proposal), Author(s) (Robert J. Barbour), Created (17 Feb 2026), Last Modified (12 Mar 2026), License (MIT) — all REQUIRED fields present |
 | Abstract | Section 1 | ✓ Single paragraph, 5 sentences, addresses problem (reinvented templates), solution (anti-bikeshedding default structure), scope (document structure, not governance) |
 | Scope, Applicability & Limitations | Section 2 | ✓ States 4 document-scope exclusions (governance, markup syntax, subject matter, formal verification), states where OSSS applies and does not, identifies 4 known limitations |
 | Problem Statement | Section 3 | ✓ Concrete problem (reinvention, reviewer burden, tooling gap) with informal survey evidence (3.4) |
@@ -568,7 +572,7 @@ The README.llm vNext proposal (Barbour, 2026) — a specification extending the 
 
 | OSSS Section | README.llm vNext | Content |
 |---|---|---|
-| Metadata Block | Document header | Title, Version 0.1, Draft, Author, Date, License |
+| Metadata Block | Document header | Title, Version 0.1, Status Proposal, Author(s), Created, Last Modified, License |
 | Abstract | Section 1 | Extends ReadMe.LLM with retrieval, multi-file, contracts |
 | Scope, Applicability & Limitations | Sections 1a, 7 | Document scope: 8K-200K tokens, synchronous APIs, not concurrent systems; System applicability: not IDEs, not concurrent systems |
 | Problem Statement | Section 2 | Documentation-consumption mismatch, cross-interface problem, retrieval gap |

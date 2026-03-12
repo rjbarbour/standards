@@ -4,15 +4,16 @@ title: "CLOAKD: Cloaking Secrets from Agentic AI"
 description: "a security standard for credential handling in agentic development environments"
 ---
 
----
-**Standard:** CLOAKD
-**Title:** Cloaking Secrets from Agentic AI
-**Version:** 1.0
-**Status:** Release
-**Author:** R.J. Barbour, with Manus AI
-**Date:** 2026-03-11
-**License:** CC BY-SA 4.0
----
+# CLOAKD: Cloaking Secrets from Agentic AI
+
+| | |
+| :--- | :--- |
+| **Version** | `1.0` |
+| **Status** | `Release` |
+| **Author(s)** | R.J. Barbour, with Manus AI |
+| **Created** | 11 Mar 2026 |
+| **Last Modified** | 12 Mar 2026 |
+| **License** | CC BY-SA 4.0 |
 
 ## 1. Abstract
 

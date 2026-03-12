@@ -7,11 +7,14 @@ description: "structured, LLM-oriented documentation file hierarchy"
 
 # README.llm vNext: Retrieval-Aware, Multi-File, and Behavioural Extensions
 
-**Version:** 0.1 (Draft)
-**Status:** Proposal
-**Author:** Robert J. Barbour
-**Date:** February 2026
-**License:** MIT
+| | |
+| :--- | :--- |
+| **Version** | `0.1` |
+| **Status** | `Proposal` |
+| **Author(s)** | Robert J. Barbour |
+| **Created** | 17 Feb 2026 |
+| **Last Modified** | 12 Mar 2026 |
+| **License** | MIT |
 
 ---
 
