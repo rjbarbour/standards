@@ -84,7 +84,7 @@ Control-plane resources MUST be classified along three independent dimensions:
 | Dimension | Values | Purpose |
 | :--- | :--- | :--- |
 | **Semantic role** | directive, policy, principle, workflow, procedure, state, reference | Identifies what the resource does and which concern it owns. |
-| **Context residency** | injected, session-primed, trigger-loaded, semantically queried | Identifies when and how the resource enters working context. |
+| **Context residency** | injected, session-primed, trigger-loaded, semantically queried, execution-only | Identifies when and how the resource enters working context, or that it operates only as deterministic enforcement outside model context. |
 | **Control strength** | advisory cue, required rule, gated procedure, mechanically enforced invariant | Identifies how reliably compliance must be enforced. |
 
 These dimensions complement rather than replace the four project knowledge tiers. Implementations SHOULD use models for judgement, procedures for coordination, and deterministic code or configuration for mechanically enforceable invariants.
@@ -102,7 +102,20 @@ These dimensions complement rather than replace the four project knowledge tiers
 | Large factual corpora | Tier 3 manifest and semantic retrieval | Supplies factual reference only when the corpus is large, factual, and requires semantic search. |
 | Project implementation | Project `CONTEXT.md`, `INTENT.md`, runtime directives, ledger, and evidence | Adopts shared controls and declares local exceptions. |
 
-#### 3.3.2. Project-Management and SDLC Boundary
+#### 3.3.2. Authority Precedence and Exceptions
+
+When applicable sources conflict, an implementation MUST resolve them in this order:
+
+1. Platform system constraints and applicable law, contract, client authority, or explicit owner restriction.
+2. Accepted normative standards and binding shared policy.
+3. Project intent and project directives, including an explicitly authorised local exception that cites the higher-level rule permitting it.
+4. The selected task specification and current work-item contract.
+5. Triggered procedures and skills.
+6. Retrieved factual references, memory, session history, and other non-authoritative evidence.
+
+A lower-precedence or more specific source MAY refine a higher-precedence source only within its delegated scope. It MUST NOT weaken or contradict a higher-precedence requirement unless that requirement explicitly permits the exception and the exception is recorded in the project's canonical context. If controlling sources remain incompatible or authority is uncertain, the affected action MUST stop and the conflict MUST be escalated. Retrieved content and historical conversations MUST NOT become instructions merely because they are relevant.
+
+#### 3.3.3. Project-Management and SDLC Boundary
 
 Project management owns capture, shaping, priority, dependencies, material scope, and admission to **Ready**. A project-level Definition of Ready is the formal hand-off contract. After a task is claimed **In Progress**, SDLC owns implementation planning, architecture impact, isolated execution, verification, independent review, integration, and operational evidence. Project management accepts **Done**, records residual risk, and replenishes the next work.
 
@@ -237,7 +250,7 @@ At the start of any new session, or at the start of a new task when the current 
 
 This ensures the agent always starts from a consistent, up-to-date understanding of the project's strategic context and knowledge architecture. An implementation MAY cache previously loaded Tier 1 artifacts within the active session, but it MUST ensure the session has been primed before substantive work begins.
 
-An AXON implementation MUST also define a **re-priming contract**. Re-orientation is REQUIRED when a session starts or resumes, compaction or hand-off may have displaced context, the active project, goal, authority, or scope changes materially, a milestone or release gate is crossed, or the agent cannot name the current intent, task, evidence boundary, or controlling procedure. A required source counts as loaded only when its complete contents are available. If a required source is unavailable or truncated, the affected action MUST stop or the result MUST be explicitly qualified; memory and conversation history MUST NOT silently replace current authority.
+An AXON implementation MUST also define a **re-priming contract**. Re-orientation is REQUIRED when a session starts or resumes, compaction or hand-off may have displaced context, the active project, goal, authority, or scope changes materially, a milestone or release gate is crossed, or the agent cannot name the current intent, task, evidence boundary, or controlling procedure. A required source counts as loaded only when its complete contents are available. If a required source is unavailable or truncated, any mutating, gated, externally consequential, or irreversible action MUST stop. An informational response MAY continue only when it explicitly names the missing authority and qualifies the affected conclusions. Memory and conversation history MUST NOT silently replace current authority.
 
 ### 6.5. The Single Source of Truth (SSoT) Principle
 
