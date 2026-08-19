@@ -3,16 +3,18 @@
 | | |
 | :--- | :--- |
 | **AIOS ID** | `AIOS-0003` |
-| **Version** | `0.1` |
+| **Version** | `0.2` |
 | **Status** | `Proposal` |
 | **Author(s)** | R. J. Babour, with Manus AI |
 | **Created** | 2026-03-11 |
-| **Last Modified** | 2026-03-12 |
+| **Last Modified** | 2026-08-19 |
 | **License** | MIT |
 
 ## Abstract
 
 This document specifies AXON, a standard for engineering the **internal knowledge architecture** of a software project to enable effective collaboration with AI agents. It defines a multi-tier framework for organizing and retrieving project context at runtime, distinguishing it from standards for external-facing documentation (`README.llm`) and higher-level intent engineering.
+
+Version 0.2 situates that project context architecture inside the broader **AXON framework**, which also includes a shared agentic control plane for cross-project routing, project-management and SDLC policy, executable procedures, evidence, assurance, and project adoption. The shared control plane governs how work and context are coordinated; it does not turn task state or delivery policy into knowledge tiers.
 
 AXON provides a structured, tool-agnostic approach to managing the information an agent needs to perform complex tasks. It addresses the challenge of "context rot" by tiering information based on its size, volatility, and access pattern. The standard defines four tiers of knowledge, a canonical entry point (`CONTEXT.md`), and a set of principles for maintaining a single source of truth (SSoT).
 
@@ -53,13 +55,66 @@ Appendix examples are intended to be AXON-compliant examples. However, project-s
 - **To Be a Full Intent Engineering Framework:** AXON provides a mechanism (the `INTENT.md` companion artifact) to encode intent, but it is not a complete standard for defining an agent's goals, values, and ethical boundaries. A full Intent Engineering standard is a separate, higher-level concern.
 - **To Standardize Specification Formats:** AXON provides the knowledge substrate for task execution, but it does not standardize the format of task specifications themselves (e.g., PRDs or PRPs).
 
+### 3.3. The Broader AXON Framework and Shared Control Plane
+
+AXON's four knowledge tiers remain a **project context architecture**. The broader AXON framework also includes a shared control plane above individual projects and an execution plane below them:
+
+```text
+AXON framework
+  Shared control plane
+    global directives and routing
+    project-management and SDLC policy
+    executable procedures and deterministic controls
+    audit, evidence, and maintenance
+  Project context architecture
+    Tier 0 injected context
+    Tier 1 project directives and intent
+    Tier 2 triggered procedures
+    Tier 3 factual retrieval
+  Project adoption
+    local entry points, ledger, exceptions, and evidence
+  Execution plane
+    agent runtimes, Git, CI, deployment, and other replaceable tools
+```
+
+The shared control plane is part of AXON, but it is not a fifth knowledge tier. Task specifications and live task state remain outside the knowledge tiers. A project ledger such as Backlog.md may be a control-plane component, while `CONTEXT.md` routes the agent to the selected task and relevant knowledge.
+
+Control-plane resources MUST be classified along three independent dimensions:
+
+| Dimension | Values | Purpose |
+| :--- | :--- | :--- |
+| **Semantic role** | directive, policy, principle, workflow, procedure, state, reference | Identifies what the resource does and which concern it owns. |
+| **Context residency** | injected, session-primed, trigger-loaded, semantically queried | Identifies when and how the resource enters working context. |
+| **Control strength** | advisory cue, required rule, gated procedure, mechanically enforced invariant | Identifies how reliably compliance must be enforced. |
+
+These dimensions complement rather than replace the four project knowledge tiers. Implementations SHOULD use models for judgement, procedures for coordination, and deterministic code or configuration for mechanically enforceable invariants.
+
+#### 3.3.1. Canonical Control-Plane Surfaces
+
+| Concern | Canonical surface | Relationship to AXON |
+| :--- | :--- | :--- |
+| Normative architecture | Versioned standards repository | Defines framework boundaries, tiers, mandatory artefacts, and normative relationships. |
+| Always-loaded behaviour and routing | Global runtime instructions | Keeps small invariants, authority boundaries, positive triggers, and the re-priming route. |
+| Shared policy and workflows | Versioned or change-tracked SOP and knowledge pages | Defines lifecycle, gates, evidence, and escalation. |
+| Executable recurring procedures | Version-controlled skills or deterministic scripts | Implements bounded workflows without copying the human SOP. |
+| Live work state | One adopted project ledger | Owns tasks, dependencies, status, plans, and evidence links; it is not a knowledge tier. |
+| Reusable prior knowledge | Memory and session archives | Locates prior evidence and decisions while remaining subordinate to current authority. |
+| Large factual corpora | Tier 3 manifest and semantic retrieval | Supplies factual reference only when the corpus is large, factual, and requires semantic search. |
+| Project implementation | Project `CONTEXT.md`, `INTENT.md`, runtime directives, ledger, and evidence | Adopts shared controls and declares local exceptions. |
+
+#### 3.3.2. Project-Management and SDLC Boundary
+
+Project management owns capture, shaping, priority, dependencies, material scope, and admission to **Ready**. A project-level Definition of Ready is the formal hand-off contract. After a task is claimed **In Progress**, SDLC owns implementation planning, architecture impact, isolated execution, verification, independent review, integration, and operational evidence. Project management accepts **Done**, records residual risk, and replenishes the next work.
+
+Controls MUST be proportionate to the work's consequence and commitment. Implementations SHOULD use the smallest control that prevents a demonstrated failure or material risk, and SHOULD remove or simplify controls that create ceremony without improving outcomes.
+
 ## 4. Prior Art and Positioning
 
 AXON builds upon a rich ecosystem of existing ideas and tools. This section positions the standard in relation to the most significant prior art.
 
 ### 4.1. The Knowledge Hierarchy: Organisation, Architecture, Project, Task
 
-Effective agentic systems require a clear hierarchy of knowledge, mirroring how human organisations structure information. AXON is explicitly a **project-level** standard, but it is designed to exist within this broader hierarchy.
+Effective agentic systems require a clear hierarchy of knowledge, mirroring how human organisations structure information. AXON's four-tier context architecture is explicitly project-level. The broader AXON framework also includes the shared control plane defined in Section 3.3, which governs cross-project policy and project adoption without treating organisation policy or task state as project knowledge tiers.
 
 | Level | Scope | Description | Examples | AXON Relationship |
 | :--- | :--- | :--- | :--- | :--- |
@@ -182,6 +237,8 @@ At the start of any new session, or at the start of a new task when the current 
 
 This ensures the agent always starts from a consistent, up-to-date understanding of the project's strategic context and knowledge architecture. An implementation MAY cache previously loaded Tier 1 artifacts within the active session, but it MUST ensure the session has been primed before substantive work begins.
 
+An AXON implementation MUST also define a **re-priming contract**. Re-orientation is REQUIRED when a session starts or resumes, compaction or hand-off may have displaced context, the active project, goal, authority, or scope changes materially, a milestone or release gate is crossed, or the agent cannot name the current intent, task, evidence boundary, or controlling procedure. A required source counts as loaded only when its complete contents are available. If a required source is unavailable or truncated, the affected action MUST stop or the result MUST be explicitly qualified; memory and conversation history MUST NOT silently replace current authority.
+
 ### 6.5. The Single Source of Truth (SSoT) Principle
 
 To prevent context drift and simplify maintenance, an AXON-compliant system SHOULD adhere to the SSoT principle.
@@ -250,6 +307,21 @@ While AXON is tool-agnostic, the following tooling categories are well-suited to
 - **Tooling Dependency:** The effectiveness of AXON is dependent on the capabilities of the underlying agentic platform. For example, the ability to use Tier 2 skills requires a platform that supports tool use.
 - **Maintenance Overhead:** While AXON simplifies maintenance by enforcing a single source of truth, it still requires discipline to keep the `CONTEXT.md` and `INTENT.md` files up to date.
 - **Cold Start Problem:** Establishing a comprehensive AXON framework for an existing project requires a significant upfront investment in organizing and migrating knowledge.
+
+## 12. Change History
+
+### Version 0.2 — 2026-08-19
+
+- Preserves the v0.1 four-tier project context architecture and task-specification boundary.
+- Defines the broader AXON framework and its shared agentic control plane.
+- Separates semantic role, context residency, and control strength.
+- Defines canonical relationships among standards, global instructions, SOPs, skills, ledgers, memory, session archives, and Tier 3 retrieval.
+- Adds the project-management to SDLC Ready hand-off and proportional-control principle.
+- Adds a mandatory re-priming contract for resume, compaction, hand-off, milestone, and material goal or authority changes.
+
+Version 0.1 remains the historical source for the original project context architecture.
+
+---
 
 ## Appendix A: A Prescriptive Implementation Guide
 
