@@ -304,6 +304,8 @@ AXON artifacts that serve as canonical or authoritative project knowledge SHOULD
 
 If Tier 0 knowledge is explicitly designated as the canonical home for some fact or preference, the implementation SHOULD provide equivalent auditability through revision history, change logs, or another durable tracking mechanism. Canonical knowledge without change tracking undermines AXON's maintainability goals.
 
+AXON status changes require the standard owner's explicit decision. Material status changes MUST be tracked through the Agentic Engineering strategic ledger and delivered through an independently reviewed pull request to this standards repository.
+
 ## 10. Tooling Recommendations
 
 While AXON is tool-agnostic, the following tooling categories are well-suited to each tier.
@@ -334,7 +336,7 @@ While AXON is tool-agnostic, the following tooling categories are well-suited to
 
 ### Acceptance — 2026-08-20
 
-- Accepted as the current AXON baseline after independent review of the v0.2 shared-control-plane changes.
+- Accepted as the current AXON baseline by owner decision. The status change is subject to independent review through the standards pull request before integration.
 
 Version 0.1 remains the historical source for the original project context architecture.
 
