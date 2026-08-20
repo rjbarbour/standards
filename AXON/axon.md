@@ -4,10 +4,10 @@
 | :--- | :--- |
 | **AIOS ID** | `AIOS-0003` |
 | **Version** | `0.2` |
-| **Status** | `Proposal` |
+| **Status** | `Accepted` |
 | **Author(s)** | R. J. Babour, with Manus AI |
 | **Created** | 2026-03-11 |
-| **Last Modified** | 2026-08-19 |
+| **Last Modified** | 2026-08-20 |
 | **License** | MIT |
 
 ## Abstract
@@ -304,6 +304,8 @@ AXON artifacts that serve as canonical or authoritative project knowledge SHOULD
 
 If Tier 0 knowledge is explicitly designated as the canonical home for some fact or preference, the implementation SHOULD provide equivalent auditability through revision history, change logs, or another durable tracking mechanism. Canonical knowledge without change tracking undermines AXON's maintainability goals.
 
+AXON status changes require the standard owner's explicit decision. Material status changes MUST be tracked through the Agentic Engineering strategic ledger and delivered through an independently reviewed pull request to this standards repository.
+
 ## 10. Tooling Recommendations
 
 While AXON is tool-agnostic, the following tooling categories are well-suited to each tier.
@@ -331,6 +333,10 @@ While AXON is tool-agnostic, the following tooling categories are well-suited to
 - Defines canonical relationships among standards, global instructions, SOPs, skills, ledgers, memory, session archives, and Tier 3 retrieval.
 - Adds the project-management to SDLC Ready hand-off and proportional-control principle.
 - Adds a mandatory re-priming contract for resume, compaction, hand-off, milestone, and material goal or authority changes.
+
+### Acceptance — 2026-08-20
+
+- Accepted as the current AXON baseline by owner decision. The status change is subject to independent review through the standards pull request before integration.
 
 Version 0.1 remains the historical source for the original project context architecture.
 
