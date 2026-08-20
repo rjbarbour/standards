@@ -4,10 +4,10 @@
 | :--- | :--- |
 | **AIOS ID** | `AIOS-0003` |
 | **Version** | `0.2` |
-| **Status** | `Proposal` |
+| **Status** | `Accepted` |
 | **Author(s)** | R. J. Babour, with Manus AI |
 | **Created** | 2026-03-11 |
-| **Last Modified** | 2026-08-19 |
+| **Last Modified** | 2026-08-20 |
 | **License** | MIT |
 
 ## Abstract
@@ -331,6 +331,10 @@ While AXON is tool-agnostic, the following tooling categories are well-suited to
 - Defines canonical relationships among standards, global instructions, SOPs, skills, ledgers, memory, session archives, and Tier 3 retrieval.
 - Adds the project-management to SDLC Ready hand-off and proportional-control principle.
 - Adds a mandatory re-priming contract for resume, compaction, hand-off, milestone, and material goal or authority changes.
+
+### Acceptance — 2026-08-20
+
+- Accepted as the current AXON baseline after independent review of the v0.2 shared-control-plane changes.
 
 Version 0.1 remains the historical source for the original project context architecture.
 
